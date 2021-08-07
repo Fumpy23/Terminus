@@ -27,6 +27,39 @@ if(PlayerObj != noone && ((place_meeting(x , y - 1, PlayerObj) && !place_meeting
 	wall_right_inst.y = y - sprite_height;
 	wall_left_inst.x = PlayerObj.x - PlayerObj.sprite_xoffset < wall_left_inst.x ? PlayerObj.x - PlayerObj.sprite_xoffset - 1 : wall_left_inst.x;
 	wall_right_inst.x = PlayerObj.x - PlayerObj.sprite_width > wall_right_inst.x ? PlayerObj.x + (PlayerObj.sprite_xoffset * PlayerObj.image_xscale) : wall_right_inst.x;
+
+	/// @DnDAction : YoYo Games.Common.Execute_Code
+	/// @DnDVersion : 1
+	/// @DnDHash : 382049DA
+	/// @DnDBreak : 1
+
+	/// @DnDParent : 17A0BF09
+	/// @DnDArgument : "code" "var walkable_inst = noone;$(13_10)$(13_10)for (var i = 0; i < instance_number(FloorObj); i += 1) {$(13_10)	walkable_inst = instance_find(FloorObj, i);$(13_10)	if (walkable_inst != noone && (wall_left_inst.x - round(wall_left_inst.sprite_width / 2) <= walkable_inst.x + round(walkable_inst.sprite_width / 2)) && (wall_left_inst.x + round(wall_left_inst.sprite_width / 2) >= walkable_inst.x - round(walkable_inst.sprite_width / 2)) && (wall_left_inst.y == walkable_inst.y - walkable_inst.sprite_height)) {$(13_10)		wall_left_inst.x = 0;$(13_10)		wall_left_inst.y = room_height + wall_left_inst.sprite_height + 1;$(13_10)	}$(13_10)	if (walkable_inst != noone && (wall_right_inst.x - round(wall_right_inst.sprite_width / 2) <= walkable_inst.x + round(walkable_inst.sprite_width / 2)) && (wall_right_inst.x + round(wall_right_inst.sprite_width / 2) >= walkable_inst.x - round(walkable_inst.sprite_width / 2)) && (wall_right_inst.y == walkable_inst.y - walkable_inst.sprite_height)) {$(13_10)		wall_right_inst.x = 0;$(13_10)		wall_right_inst.y = room_height + wall_right_inst.sprite_height + 1;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(FloorDropObj); i += 1) {$(13_10)	walkable_inst = instance_find(FloorDropObj, i);$(13_10)	if (walkable_inst != noone && (wall_left_inst.x - round(wall_left_inst.sprite_width / 2) <= walkable_inst.x + round(walkable_inst.sprite_width / 2)) && (wall_left_inst.x + round(wall_left_inst.sprite_width / 2) >= walkable_inst.x - round(walkable_inst.sprite_width / 2)) && (wall_left_inst.y == walkable_inst.y - walkable_inst.sprite_height)) {$(13_10)		wall_left_inst.x = 0;$(13_10)		wall_left_inst.y = room_height + wall_left_inst.sprite_height + 1;$(13_10)	}$(13_10)	if (walkable_inst != noone && (wall_right_inst.x - round(wall_right_inst.sprite_width / 2) <= walkable_inst.x + round(walkable_inst.sprite_width / 2)) && (wall_right_inst.x + round(wall_right_inst.sprite_width / 2) >= walkable_inst.x - round(walkable_inst.sprite_width / 2)) && (wall_right_inst.y == walkable_inst.y - walkable_inst.sprite_height)) {$(13_10)		wall_right_inst.x = 0;$(13_10)		wall_right_inst.y = room_height + wall_right_inst.sprite_height + 1;$(13_10)	}$(13_10)}"
+	var walkable_inst = noone;
+	
+	for (var i = 0; i < instance_number(FloorObj); i += 1) {
+		walkable_inst = instance_find(FloorObj, i);
+		if (walkable_inst != noone && (wall_left_inst.x - round(wall_left_inst.sprite_width / 2) <= walkable_inst.x + round(walkable_inst.sprite_width / 2)) && (wall_left_inst.x + round(wall_left_inst.sprite_width / 2) >= walkable_inst.x - round(walkable_inst.sprite_width / 2)) && (wall_left_inst.y == walkable_inst.y - walkable_inst.sprite_height)) {
+			wall_left_inst.x = 0;
+			wall_left_inst.y = room_height + wall_left_inst.sprite_height + 1;
+		}
+		if (walkable_inst != noone && (wall_right_inst.x - round(wall_right_inst.sprite_width / 2) <= walkable_inst.x + round(walkable_inst.sprite_width / 2)) && (wall_right_inst.x + round(wall_right_inst.sprite_width / 2) >= walkable_inst.x - round(walkable_inst.sprite_width / 2)) && (wall_right_inst.y == walkable_inst.y - walkable_inst.sprite_height)) {
+			wall_right_inst.x = 0;
+			wall_right_inst.y = room_height + wall_right_inst.sprite_height + 1;
+		}
+	}
+	
+	for (var i = 0; i < instance_number(FloorDropObj); i += 1) {
+		walkable_inst = instance_find(FloorDropObj, i);
+		if (walkable_inst != noone && (wall_left_inst.x - round(wall_left_inst.sprite_width / 2) <= walkable_inst.x + round(walkable_inst.sprite_width / 2)) && (wall_left_inst.x + round(wall_left_inst.sprite_width / 2) >= walkable_inst.x - round(walkable_inst.sprite_width / 2)) && (wall_left_inst.y == walkable_inst.y - walkable_inst.sprite_height)) {
+			wall_left_inst.x = 0;
+			wall_left_inst.y = room_height + wall_left_inst.sprite_height + 1;
+		}
+		if (walkable_inst != noone && (wall_right_inst.x - round(wall_right_inst.sprite_width / 2) <= walkable_inst.x + round(walkable_inst.sprite_width / 2)) && (wall_right_inst.x + round(wall_right_inst.sprite_width / 2) >= walkable_inst.x - round(walkable_inst.sprite_width / 2)) && (wall_right_inst.y == walkable_inst.y - walkable_inst.sprite_height)) {
+			wall_right_inst.x = 0;
+			wall_right_inst.y = room_height + wall_right_inst.sprite_height + 1;
+		}
+	}
 }
 
 /// @DnDAction : YoYo Games.Common.Else

@@ -408,67 +408,37 @@ else
 			/// @DnDAction : YoYo Games.Common.Execute_Code
 			/// @DnDVersion : 1
 			/// @DnDHash : 6E77FD6A
-			/// @DnDBreak : 1
-		
 			/// @DnDParent : 24FB3E65
-			/// @DnDArgument : "code" "if (!button_contextual_hold) {$(13_10)	is_player_pushing = 0;$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(WallObj); i += 1) {$(13_10)	blocker_inst = instance_find(WallObj, i);$(13_10)	if (place_meeting(pushable_inst.x - pushable_inst.sprite_xoffset + 10, pushable_inst.y, blocker_inst) && pushable_inst.x > blocker_inst.x) {$(13_10)		if (hspeed < 0 && blocker_inst != noone && blocker_inst.visible) {$(13_10)			is_player_pushing = 0;$(13_10)		}$(13_10)	}$(13_10)	if (place_meeting(pushable_inst.x + pushable_inst.sprite_xoffset - 9, pushable_inst.y, blocker_inst) && pushable_inst.x < blocker_inst.x) {$(13_10)		if (hspeed > 0 && blocker_inst != noone && blocker_inst.visible) {$(13_10)			is_player_pushing = 0;$(13_10)		}$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(BarrierObj); i += 1) {$(13_10)	blocker_inst = instance_find(BarrierObj, i);$(13_10)	if (place_meeting(pushable_inst.x - pushable_inst.sprite_xoffset + 10, pushable_inst.y, blocker_inst) && pushable_inst.x > blocker_inst.x) {$(13_10)		if (hspeed < 0 && blocker_inst != noone && blocker_inst.visible) {$(13_10)			is_player_pushing = 0;$(13_10)		}$(13_10)	}$(13_10)	if (place_meeting(pushable_inst.x + pushable_inst.sprite_xoffset - 9, pushable_inst.y, blocker_inst) && pushable_inst.x < blocker_inst.x) {$(13_10)		if (hspeed > 0 && blocker_inst != noone && blocker_inst.visible) {$(13_10)			is_player_pushing = 0;$(13_10)		}$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(ClimbableObj); i += 1) {$(13_10)	blocker_inst = instance_find(ClimbableObj, i);$(13_10)	if ((place_meeting(pushable_inst.x - pushable_inst.sprite_xoffset + 10, pushable_inst.y, blocker_inst) || place_meeting(pushable_inst.x - pushable_inst.sprite_xoffset + 10, pushable_inst.y - (pushable_inst.sprite_yoffset / 2) - 1, blocker_inst)) && pushable_inst.x > blocker_inst.x) {$(13_10)		if (hspeed < 0 && blocker_inst != noone && blocker_inst.visible) {$(13_10)			is_player_pushing = 0;$(13_10)		}$(13_10)	}$(13_10)	if ((place_meeting(pushable_inst.x + pushable_inst.sprite_xoffset - 9, pushable_inst.y, blocker_inst) || place_meeting(pushable_inst.x + pushable_inst.sprite_xoffset - 9, pushable_inst.y - (pushable_inst.sprite_yoffset / 2) - 1, blocker_inst)) && pushable_inst.x < blocker_inst.x) {$(13_10)		if (hspeed > 0 && blocker_inst != noone && blocker_inst.visible) {$(13_10)			is_player_pushing = 0;$(13_10)		}$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(PushableObj); i += 1) {$(13_10)	blocker_inst = instance_find(PushableObj, i);$(13_10)	if (place_meeting(pushable_inst.x - pushable_inst.sprite_xoffset + 10, pushable_inst.y, blocker_inst) && pushable_inst.x > blocker_inst.x) {$(13_10)		if (hspeed < 0 && blocker_inst != noone && blocker_inst.id != pushable_inst.id) {$(13_10)			is_player_pushing = 0;$(13_10)		}$(13_10)	}$(13_10)	if (place_meeting(pushable_inst.x + pushable_inst.sprite_xoffset - 9, pushable_inst.y, blocker_inst) && pushable_inst.x < blocker_inst.x) {$(13_10)		if (hspeed > 0 && blocker_inst != noone && blocker_inst.id != pushable_inst.id) {$(13_10)			is_player_pushing = 0;$(13_10)		}$(13_10)	}$(13_10)}"
+			/// @DnDArgument : "code" "if (!button_contextual_hold) {$(13_10)	is_player_pushing = 0;$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(WallObj); i += 1) {$(13_10)	blocker_inst = instance_find(WallObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(BarrierObj); i += 1) {$(13_10)	blocker_inst = instance_find(BarrierObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(ClimbableObj); i += 1) {$(13_10)	blocker_inst = instance_find(ClimbableObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(PushableObj); i += 1) {$(13_10)	blocker_inst = instance_find(PushableObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.id != pushable_inst.id && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}"
 			if (!button_contextual_hold) {
 				is_player_pushing = 0;
 			}
 			
 			for (var i = 0; i < instance_number(WallObj); i += 1) {
 				blocker_inst = instance_find(WallObj, i);
-				if (place_meeting(pushable_inst.x - pushable_inst.sprite_xoffset + 10, pushable_inst.y, blocker_inst) && pushable_inst.x > blocker_inst.x) {
-					if (hspeed < 0 && blocker_inst != noone && blocker_inst.visible) {
-						is_player_pushing = 0;
-					}
-				}
-				if (place_meeting(pushable_inst.x + pushable_inst.sprite_xoffset - 9, pushable_inst.y, blocker_inst) && pushable_inst.x < blocker_inst.x) {
-					if (hspeed > 0 && blocker_inst != noone && blocker_inst.visible) {
-						is_player_pushing = 0;
-					}
+				if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {
+					is_player_pushing = 0;
 				}
 			}
 			
 			for (var i = 0; i < instance_number(BarrierObj); i += 1) {
 				blocker_inst = instance_find(BarrierObj, i);
-				if (place_meeting(pushable_inst.x - pushable_inst.sprite_xoffset + 10, pushable_inst.y, blocker_inst) && pushable_inst.x > blocker_inst.x) {
-					if (hspeed < 0 && blocker_inst != noone && blocker_inst.visible) {
-						is_player_pushing = 0;
-					}
-				}
-				if (place_meeting(pushable_inst.x + pushable_inst.sprite_xoffset - 9, pushable_inst.y, blocker_inst) && pushable_inst.x < blocker_inst.x) {
-					if (hspeed > 0 && blocker_inst != noone && blocker_inst.visible) {
-						is_player_pushing = 0;
-					}
+				if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {
+					is_player_pushing = 0;
 				}
 			}
 			
 			for (var i = 0; i < instance_number(ClimbableObj); i += 1) {
 				blocker_inst = instance_find(ClimbableObj, i);
-				if ((place_meeting(pushable_inst.x - pushable_inst.sprite_xoffset + 10, pushable_inst.y, blocker_inst) || place_meeting(pushable_inst.x - pushable_inst.sprite_xoffset + 10, pushable_inst.y - (pushable_inst.sprite_yoffset / 2) - 1, blocker_inst)) && pushable_inst.x > blocker_inst.x) {
-					if (hspeed < 0 && blocker_inst != noone && blocker_inst.visible) {
-						is_player_pushing = 0;
-					}
-				}
-				if ((place_meeting(pushable_inst.x + pushable_inst.sprite_xoffset - 9, pushable_inst.y, blocker_inst) || place_meeting(pushable_inst.x + pushable_inst.sprite_xoffset - 9, pushable_inst.y - (pushable_inst.sprite_yoffset / 2) - 1, blocker_inst)) && pushable_inst.x < blocker_inst.x) {
-					if (hspeed > 0 && blocker_inst != noone && blocker_inst.visible) {
-						is_player_pushing = 0;
-					}
+				if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {
+					is_player_pushing = 0;
 				}
 			}
 			
 			for (var i = 0; i < instance_number(PushableObj); i += 1) {
 				blocker_inst = instance_find(PushableObj, i);
-				if (place_meeting(pushable_inst.x - pushable_inst.sprite_xoffset + 10, pushable_inst.y, blocker_inst) && pushable_inst.x > blocker_inst.x) {
-					if (hspeed < 0 && blocker_inst != noone && blocker_inst.id != pushable_inst.id) {
-						is_player_pushing = 0;
-					}
-				}
-				if (place_meeting(pushable_inst.x + pushable_inst.sprite_xoffset - 9, pushable_inst.y, blocker_inst) && pushable_inst.x < blocker_inst.x) {
-					if (hspeed > 0 && blocker_inst != noone && blocker_inst.id != pushable_inst.id) {
-						is_player_pushing = 0;
-					}
+				if (blocker_inst != noone && blocker_inst.id != pushable_inst.id && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {
+					is_player_pushing = 0;
 				}
 			}
 		
