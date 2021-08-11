@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 33E9DE04
-/// @DnDArgument : "code" "can_player_move_left = false;$(13_10)can_player_move_right = false;$(13_10)walkable_inst = noone;$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, FloorObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, FloorDropObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, LadderObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(ClimbableObj); i += 1) {$(13_10)	walkable_inst = instance_find(ClimbableObj, i);$(13_10)	if (place_meeting(x + sprite_width, y + 1, walkable_inst) && !place_meeting(x, y, walkable_inst)) {$(13_10)		can_player_move_left = true;$(13_10)	}$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, PushableObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)}$(13_10)$(13_10)can_player_move_left = can_player_move_left && !place_meeting(x - 2, y, WallObj);$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, FloorObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, FloorDropObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, LadderObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	//walkable_inst.x = x;$(13_10)	//walkable_inst.y = y;$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(ClimbableObj); i += 1) {$(13_10)	walkable_inst = instance_find(ClimbableObj, i);$(13_10)	if (place_meeting(x + sprite_width, y + 1, walkable_inst) && !place_meeting(x, y, walkable_inst)) {$(13_10)		can_player_move_right = true;$(13_10)	}$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, PushableObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallObj);"
+/// @DnDArgument : "code" "can_player_move_left = false;$(13_10)can_player_move_right = false;$(13_10)walkable_inst = noone;$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, FloorObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, FloorDropObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, LadderObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(ClimbableObj); i += 1) {$(13_10)	walkable_inst = instance_find(ClimbableObj, i);$(13_10)	if (place_meeting(x + sprite_width, y + 1, walkable_inst) && !place_meeting(x, y, walkable_inst)) {$(13_10)		can_player_move_left = true;$(13_10)		can_player_move_right = true;$(13_10)	}$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, PushableObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)can_player_move_left = can_player_move_left && !place_meeting(x - 2, y, WallObj);$(13_10)can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallObj);"
 can_player_move_left = false;
 can_player_move_right = false;
 walkable_inst = noone;
@@ -9,103 +9,72 @@ walkable_inst = noone;
 walkable_inst = instance_place(x + sprite_width, y + 1, FloorObj);
 if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {
 	can_player_move_left = true;
+	can_player_move_right = true;
 }
 
 walkable_inst = instance_place(x + sprite_width, y + 1, FloorDropObj);
 if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {
 	can_player_move_left = true;
+	can_player_move_right = true;
 }
 
 walkable_inst = instance_place(x + sprite_width, y + 1, LadderObj);
 if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {
 	can_player_move_left = true;
+	can_player_move_right = true;
 }
 
 for (var i = 0; i < instance_number(ClimbableObj); i += 1) {
 	walkable_inst = instance_find(ClimbableObj, i);
 	if (place_meeting(x + sprite_width, y + 1, walkable_inst) && !place_meeting(x, y, walkable_inst)) {
 		can_player_move_left = true;
-	}
-}
-
-walkable_inst = instance_place(x + sprite_width, y + 1, PushableObj);
-if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {
-	can_player_move_left = true;
-}
-
-can_player_move_left = can_player_move_left && !place_meeting(x - 2, y, WallObj);
-
-walkable_inst = instance_place(x + sprite_width, y + 1, FloorObj);
-if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {
-	can_player_move_right = true;
-}
-
-walkable_inst = instance_place(x + sprite_width, y + 1, FloorDropObj);
-if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {
-	can_player_move_right = true;
-}
-
-walkable_inst = instance_place(x + sprite_width, y + 1, LadderObj);
-if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {
-	//walkable_inst.x = x;
-	//walkable_inst.y = y;
-	can_player_move_right = true;
-}
-
-for (var i = 0; i < instance_number(ClimbableObj); i += 1) {
-	walkable_inst = instance_find(ClimbableObj, i);
-	if (place_meeting(x + sprite_width, y + 1, walkable_inst) && !place_meeting(x, y, walkable_inst)) {
 		can_player_move_right = true;
 	}
 }
 
 walkable_inst = instance_place(x + sprite_width, y + 1, PushableObj);
 if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {
+	can_player_move_left = true;
 	can_player_move_right = true;
 }
 
+can_player_move_left = can_player_move_left && !place_meeting(x - 2, y, WallObj);
 can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallObj);
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 308067B2
-/// @DnDInput : 14
+/// @DnDInput : 12
 /// @DnDArgument : "expr" "keyboard_check(ord("A"))"
 /// @DnDArgument : "expr_1" "keyboard_check(ord("D"))"
 /// @DnDArgument : "expr_2" "(((button_right * can_player_move_right) - (button_left * can_player_move_left)) * run_speed * !is_player_climbing * !is_player_falling * !is_player_pushing) + (is_player_pushing * player_pushing_speed)"
 /// @DnDArgument : "expr_3" "blink_time - 1"
 /// @DnDArgument : "expr_4" "(is_player_climbing * player_climbing_speed) + (is_player_falling * player_falling_speed)"
 /// @DnDArgument : "expr_5" "keyboard_check_pressed(ord("I"))"
-/// @DnDArgument : "expr_6" "instance_find(ContextualButtonObj, 0)"
-/// @DnDArgument : "expr_7" "keyboard_check(ord("S"))"
-/// @DnDArgument : "expr_8" "instance_find(PlayerDropColObj, 0)"
-/// @DnDArgument : "expr_10" "keyboard_check(ord("I"))"
-/// @DnDArgument : "expr_11" "keyboard_check(ord("W"))"
-/// @DnDArgument : "expr_12" "walking_sound_delay - 1"
-/// @DnDArgument : "expr_13" "climbing_sound_delay - 1"
+/// @DnDArgument : "expr_6" "keyboard_check(ord("S"))"
+/// @DnDArgument : "expr_8" "keyboard_check(ord("I"))"
+/// @DnDArgument : "expr_9" "keyboard_check(ord("W"))"
+/// @DnDArgument : "expr_10" "walking_sound_delay - 1"
+/// @DnDArgument : "expr_11" "climbing_sound_delay - 1"
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
 /// @DnDArgument : "var_2" "hspeed"
 /// @DnDArgument : "var_3" "blink_time"
 /// @DnDArgument : "var_4" "vspeed"
 /// @DnDArgument : "var_5" "button_contextual"
-/// @DnDArgument : "var_6" "contextual_inst"
-/// @DnDArgument : "var_7" "button_down"
-/// @DnDArgument : "var_8" "player_drop_inst"
-/// @DnDArgument : "var_9" "can_player_drop"
-/// @DnDArgument : "var_10" "button_contextual_hold"
-/// @DnDArgument : "var_11" "button_up"
-/// @DnDArgument : "var_12" "walking_sound_delay"
-/// @DnDArgument : "var_13" "climbing_sound_delay"
+/// @DnDArgument : "var_6" "button_down"
+/// @DnDArgument : "var_7" "can_player_drop"
+/// @DnDArgument : "var_8" "button_contextual_hold"
+/// @DnDArgument : "var_9" "button_up"
+/// @DnDArgument : "var_10" "walking_sound_delay"
+/// @DnDArgument : "var_11" "climbing_sound_delay"
 button_left = keyboard_check(ord("A"));
 button_right = keyboard_check(ord("D"));
 hspeed = (((button_right * can_player_move_right) - (button_left * can_player_move_left)) * run_speed * !is_player_climbing * !is_player_falling * !is_player_pushing) + (is_player_pushing * player_pushing_speed);
 blink_time = blink_time - 1;
 vspeed = (is_player_climbing * player_climbing_speed) + (is_player_falling * player_falling_speed);
 button_contextual = keyboard_check_pressed(ord("I"));
-contextual_inst = instance_find(ContextualButtonObj, 0);
 button_down = keyboard_check(ord("S"));
-player_drop_inst = instance_find(PlayerDropColObj, 0);
 can_player_drop = 0;
 button_contextual_hold = keyboard_check(ord("I"));
 button_up = keyboard_check(ord("W"));
@@ -409,7 +378,7 @@ else
 			/// @DnDVersion : 1
 			/// @DnDHash : 6E77FD6A
 			/// @DnDParent : 24FB3E65
-			/// @DnDArgument : "code" "if (!button_contextual_hold) {$(13_10)	is_player_pushing = 0;$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(WallObj); i += 1) {$(13_10)	blocker_inst = instance_find(WallObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(BarrierObj); i += 1) {$(13_10)	blocker_inst = instance_find(BarrierObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(ClimbableObj); i += 1) {$(13_10)	blocker_inst = instance_find(ClimbableObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(PushableObj); i += 1) {$(13_10)	blocker_inst = instance_find(PushableObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.id != pushable_inst.id && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}"
+			/// @DnDArgument : "code" "if (!button_contextual_hold) {$(13_10)	is_player_pushing = 0;$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(WallObj); i += 1) {$(13_10)	blocker_inst = instance_find(WallObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(BarrierObj); i += 1) {$(13_10)	blocker_inst = instance_find(BarrierObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(ClimbableObj); i += 1) {$(13_10)	blocker_inst = instance_find(ClimbableObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(LadderObj); i += 1) {$(13_10)	blocker_inst = instance_find(LadderObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(PushableObj); i += 1) {$(13_10)	blocker_inst = instance_find(PushableObj, i);$(13_10)	if (blocker_inst != noone && blocker_inst.id != pushable_inst.id && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)		is_player_pushing = 0;$(13_10)	}$(13_10)}"
 			if (!button_contextual_hold) {
 				is_player_pushing = 0;
 			}
@@ -430,6 +399,13 @@ else
 			
 			for (var i = 0; i < instance_number(ClimbableObj); i += 1) {
 				blocker_inst = instance_find(ClimbableObj, i);
+				if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {
+					is_player_pushing = 0;
+				}
+			}
+			
+			for (var i = 0; i < instance_number(LadderObj); i += 1) {
+				blocker_inst = instance_find(LadderObj, i);
 				if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - (blocker_inst.sprite_width / 2) - hspeed <= pushable_inst.x + (pushable_inst.sprite_width / 2)) && (blocker_inst.x + (blocker_inst.sprite_width / 2) - hspeed >= pushable_inst.x - (pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {
 					is_player_pushing = 0;
 				}
