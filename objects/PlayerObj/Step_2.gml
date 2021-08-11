@@ -13,6 +13,8 @@ if(!is_contextual_button_being_used &&  !contextual_inst.visible && image_xscale
 	/// @DnDAction : YoYo Games.Common.Execute_Code
 	/// @DnDVersion : 1
 	/// @DnDHash : 6DFA62CC
+	/// @DnDBreak : 1
+
 	/// @DnDParent : 043815BC
 	/// @DnDArgument : "code" "pushable_inst = noone;$(13_10)var pushable_found = 0;$(13_10)$(13_10)for (var i = 0; i < instance_number(PushableObj) && !pushable_found; i += 1) {$(13_10)	pushable_inst = instance_find(PushableObj, i);$(13_10)	if (pushable_inst != noone && place_meeting(x + 8, y, pushable_inst) && !place_meeting(x, y, pushable_inst) && !place_meeting(x + 8, y, WallObj) && !pushable_found) {$(13_10)		for (var j = 0; j < instance_number(WallObj) && pushable_inst != noone; j += 1) {$(13_10)			blocker_inst = instance_find(WallObj, j);$(13_10)			if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - round(blocker_inst.sprite_width / 2) - 1 <= pushable_inst.x + round(pushable_inst.sprite_width / 2)) && (blocker_inst.x + round(blocker_inst.sprite_width / 2) - 1 >= pushable_inst.x - round(pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)				pushable_inst = noone;$(13_10)			}$(13_10)		}$(13_10)		$(13_10)		for (var j = 0; j < instance_number(BarrierObj) && pushable_inst != noone; j += 1) {$(13_10)			blocker_inst = instance_find(BarrierObj, j);$(13_10)			if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - round(blocker_inst.sprite_width / 2) - 1 <= pushable_inst.x + round(pushable_inst.sprite_width / 2)) && (blocker_inst.x + round(blocker_inst.sprite_width / 2) - 1 >= pushable_inst.x - round(pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)				pushable_inst = noone;$(13_10)			}$(13_10)		}$(13_10)		$(13_10)		for (var j = 0; j < instance_number(ClimbableObj) && pushable_inst != noone; j += 1) {$(13_10)			blocker_inst = instance_find(ClimbableObj, j);$(13_10)			if (blocker_inst != noone && blocker_inst.visible && (blocker_inst.x - round(blocker_inst.sprite_width / 2) - 1 <= pushable_inst.x + round(pushable_inst.sprite_width / 2)) && (blocker_inst.x + round(blocker_inst.sprite_width / 2) - 1 >= pushable_inst.x - round(pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)				pushable_inst = noone;$(13_10)			}$(13_10)		}$(13_10)		$(13_10)		for (var j = 0; j < instance_number(PushableObj) && pushable_inst != noone; j += 1) {$(13_10)			blocker_inst = instance_find(PushableObj, j);$(13_10)			if (blocker_inst != noone && blocker_inst.id != pushable_inst.id && blocker_inst.visible && (blocker_inst.x - round(blocker_inst.sprite_width / 2) - 1 <= pushable_inst.x + round(pushable_inst.sprite_width / 2)) && (blocker_inst.x + round(blocker_inst.sprite_width / 2) - 1 >= pushable_inst.x - round(pushable_inst.sprite_width / 2)) && (blocker_inst.y - blocker_inst.sprite_height <= pushable_inst.y) && (blocker_inst.y >= pushable_inst.y - pushable_inst.sprite_height)) {$(13_10)				pushable_inst = noone;$(13_10)			}$(13_10)		}$(13_10)		$(13_10)		if (pushable_inst != noone) {$(13_10)			pushable_found = 1;$(13_10)		}$(13_10)	}$(13_10)}"
 	pushable_inst = noone;
@@ -84,7 +86,7 @@ if(!is_contextual_button_being_used &&  !contextual_inst.visible && image_xscale
 			/// @DnDParent : 31CB563C
 			/// @DnDArgument : "expr" "1"
 			/// @DnDArgument : "expr_1" "1"
-			/// @DnDArgument : "expr_2" "pushable_inst.x - (pushable_inst.sprite_width / 2) - 5"
+			/// @DnDArgument : "expr_2" "pushable_inst.x - round(pushable_inst.sprite_width / 2) - 5"
 			/// @DnDArgument : "expr_3" "1"
 			/// @DnDArgument : "expr_4" "player_pushing_speed"
 			/// @DnDArgument : "var" "is_contextual_button_being_used"
@@ -94,7 +96,7 @@ if(!is_contextual_button_being_used &&  !contextual_inst.visible && image_xscale
 			/// @DnDArgument : "var_4" "pushable_inst.hspeed"
 			is_contextual_button_being_used = 1;
 			is_player_pushing = 1;
-			x = pushable_inst.x - (pushable_inst.sprite_width / 2) - 5;
+			x = pushable_inst.x - round(pushable_inst.sprite_width / 2) - 5;
 			player_pushing_speed = 1;
 			pushable_inst.hspeed = player_pushing_speed;
 		}
@@ -197,7 +199,7 @@ if(!is_contextual_button_being_used && !contextual_inst.visible && image_xscale 
 			/// @DnDParent : 6ED2C110
 			/// @DnDArgument : "expr" "1"
 			/// @DnDArgument : "expr_1" "1"
-			/// @DnDArgument : "expr_2" "pushable_inst.x + (pushable_inst.sprite_width / 2) + 5"
+			/// @DnDArgument : "expr_2" "pushable_inst.x + round(pushable_inst.sprite_width / 2) + 5"
 			/// @DnDArgument : "expr_3" "-1"
 			/// @DnDArgument : "expr_4" "player_pushing_speed"
 			/// @DnDArgument : "var" "is_contextual_button_being_used"
@@ -207,7 +209,7 @@ if(!is_contextual_button_being_used && !contextual_inst.visible && image_xscale 
 			/// @DnDArgument : "var_4" "pushable_inst.hspeed"
 			is_contextual_button_being_used = 1;
 			is_player_pushing = 1;
-			x = pushable_inst.x + (pushable_inst.sprite_width / 2) + 5;
+			x = pushable_inst.x + round(pushable_inst.sprite_width / 2) + 5;
 			player_pushing_speed = -1;
 			pushable_inst.hspeed = player_pushing_speed;
 		}
