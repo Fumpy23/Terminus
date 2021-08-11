@@ -71,3 +71,25 @@ walking_sound_delay_max = 15;
 walking_sound_delay = 0;
 climbing_sound_delay_max = 15;
 climbing_sound_delay = 0;
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 443F6272
+/// @DnDArgument : "xpos_relative" "1"
+/// @DnDArgument : "ypos_relative" "1"
+/// @DnDArgument : "var" "contextual_inst"
+/// @DnDArgument : "objectid" "ContextualButtonObj"
+/// @DnDArgument : "layer" ""Front""
+/// @DnDSaveInfo : "objectid" "ContextualButtonObj"
+contextual_inst = instance_create_layer(x + 0, y + 0, "Front", ContextualButtonObj);
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 0FAE0479
+/// @DnDArgument : "xpos_relative" "1"
+/// @DnDArgument : "ypos_relative" "1"
+/// @DnDArgument : "var" "player_drop_inst"
+/// @DnDArgument : "objectid" "PlayerDropColObj"
+/// @DnDArgument : "layer" ""Back""
+/// @DnDSaveInfo : "objectid" "PlayerDropColObj"
+player_drop_inst = instance_create_layer(x + 0, y + 0, "Back", PlayerDropColObj);
