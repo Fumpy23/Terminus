@@ -1,13 +1,16 @@
 {
   "spriteId": {
-    "name": "PlayerDropLColSpr",
-    "path": "sprites/PlayerDropLColSpr/PlayerDropLColSpr.yy",
+    "name": "DrawerMSpr",
+    "path": "sprites/DrawerMSpr/DrawerMSpr.yy",
   },
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "PushableObj",
+    "path": "objects/PushableObj/PushableObj.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -21,16 +24,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"isDnD":true,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":true,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Player",
-    "path": "folders/Objects/Player.yy",
+    "name": "Pushable",
+    "path": "folders/Objects/Pushable.yy",
   },
   "resourceVersion": "1.0",
-  "name": "PlayerDropLColObj",
+  "name": "PushableClimbableDrawerMObj",
   "tags": [],
   "resourceType": "GMObject",
 }
