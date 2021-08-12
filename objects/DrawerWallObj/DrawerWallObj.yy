@@ -1,10 +1,16 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "DrawerWallColSpr",
+    "path": "sprites/DrawerWallColSpr/DrawerWallColSpr.yy",
+  },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "WallObj",
+    "path": "objects/WallObj/WallObj.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -21,11 +27,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Climbable",
-    "path": "folders/Objects/Climbable.yy",
+    "name": "Walls",
+    "path": "folders/Objects/Walls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ClimbableObj",
+  "name": "DrawerWallObj",
   "tags": [],
   "resourceType": "GMObject",
 }

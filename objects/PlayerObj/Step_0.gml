@@ -1,45 +1,47 @@
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 33E9DE04
-/// @DnDArgument : "code" "can_player_move_left = false;$(13_10)can_player_move_right = false;$(13_10)walkable_inst = noone;$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, FloorObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, FloorDropObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, LadderObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(ClimbableObj); i += 1) {$(13_10)	walkable_inst = instance_find(ClimbableObj, i);$(13_10)	if (place_meeting(x + sprite_width, y + 1, walkable_inst) && !place_meeting(x, y, walkable_inst)) {$(13_10)		can_player_move_left = true;$(13_10)		can_player_move_right = true;$(13_10)	}$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, PushableObj);$(13_10)if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)can_player_move_left = can_player_move_left && !place_meeting(x - 2, y, WallObj);$(13_10)can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallObj);"
+/// @DnDBreak : 1
+
+/// @DnDArgument : "code" "can_player_move_left = false;$(13_10)can_player_move_right = false;$(13_10)walkable_inst = noone;$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, FloorObj);$(13_10)if (walkable_inst != noone && (y == walkable_inst.y - walkable_inst.sprite_height) && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, FloorDropObj);$(13_10)if (walkable_inst != noone && (y == walkable_inst.y - walkable_inst.sprite_height) && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)walkable_inst = instance_place(x + sprite_width, y + 1, LadderObj);$(13_10)if (walkable_inst != noone && (y == walkable_inst.y - walkable_inst.sprite_height) && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)	can_player_move_right = true;$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(ClimbableObj); i += 1) {$(13_10)	walkable_inst = instance_find(ClimbableObj, i);$(13_10)	if (place_meeting(x + sprite_width, y + 1, walkable_inst) && (y == walkable_inst.y - walkable_inst.sprite_height) && !place_meeting(x, y, walkable_inst)) {$(13_10)		can_player_move_left = true;$(13_10)		can_player_move_right = true;$(13_10)	}$(13_10)}$(13_10)$(13_10)/*walkable_inst = instance_place(x + sprite_width, y + 1, PushableObj);$(13_10)if (walkable_inst != noone && (y == walkable_inst.y - walkable_inst.sprite_height) && !place_meeting(x, y, walkable_inst)) {$(13_10)	can_player_move_left = true;$(13_10)	can_player_move_right = true;$(13_10)}*/$(13_10)$(13_10)can_player_move_left = can_player_move_left && !place_meeting(x - 2, y, WallObj);$(13_10)can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallObj);"
 can_player_move_left = false;
 can_player_move_right = false;
 walkable_inst = noone;
 
 walkable_inst = instance_place(x + sprite_width, y + 1, FloorObj);
-if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {
+if (walkable_inst != noone && (y == walkable_inst.y - walkable_inst.sprite_height) && !place_meeting(x, y, walkable_inst)) {
 	can_player_move_left = true;
 	can_player_move_right = true;
 }
 
 walkable_inst = instance_place(x + sprite_width, y + 1, FloorDropObj);
-if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {
+if (walkable_inst != noone && (y == walkable_inst.y - walkable_inst.sprite_height) && !place_meeting(x, y, walkable_inst)) {
 	can_player_move_left = true;
 	can_player_move_right = true;
 }
 
 walkable_inst = instance_place(x + sprite_width, y + 1, LadderObj);
-if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {
+if (walkable_inst != noone && (y == walkable_inst.y - walkable_inst.sprite_height) && !place_meeting(x, y, walkable_inst)) {
 	can_player_move_left = true;
 	can_player_move_right = true;
 }
 
 for (var i = 0; i < instance_number(ClimbableObj); i += 1) {
 	walkable_inst = instance_find(ClimbableObj, i);
-	if (place_meeting(x + sprite_width, y + 1, walkable_inst) && !place_meeting(x, y, walkable_inst)) {
+	if (place_meeting(x + sprite_width, y + 1, walkable_inst) && (y == walkable_inst.y - walkable_inst.sprite_height) && !place_meeting(x, y, walkable_inst)) {
 		can_player_move_left = true;
 		can_player_move_right = true;
 	}
 }
 
-walkable_inst = instance_place(x + sprite_width, y + 1, PushableObj);
-if (walkable_inst != noone && !place_meeting(x, y, walkable_inst)) {
+/*walkable_inst = instance_place(x + sprite_width, y + 1, PushableObj);
+if (walkable_inst != noone && (y == walkable_inst.y - walkable_inst.sprite_height) && !place_meeting(x, y, walkable_inst)) {
 	can_player_move_left = true;
 	can_player_move_right = true;
-}
+}*/
 
 can_player_move_left = can_player_move_left && !place_meeting(x - 2, y, WallObj);
-can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallObj);
+can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallObj);/**/
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

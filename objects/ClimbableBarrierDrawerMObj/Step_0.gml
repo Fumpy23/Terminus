@@ -1,8 +1,3 @@
-/// @DnDAction : YoYo Games.Instances.Inherit_Event
-/// @DnDVersion : 1
-/// @DnDHash : 26BB44D7
-event_inherited();
-
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 5BCCD24F
