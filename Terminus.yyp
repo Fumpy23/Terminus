@@ -45,6 +45,7 @@
     {"id":{"name":"DrawerWallColSpr","path":"sprites/DrawerWallColSpr/DrawerWallColSpr.yy",},"order":1,},
     {"id":{"name":"FloorSSpr","path":"sprites/FloorSSpr/FloorSSpr.yy",},"order":0,},
     {"id":{"name":"ClimbableObj","path":"objects/ClimbableObj/ClimbableObj.yy",},"order":0,},
+    {"id":{"name":"PlayerShootRSpr","path":"sprites/PlayerShootRSpr/PlayerShootRSpr.yy",},"order":0,},
     {"id":{"name":"PushableWallDrawerObj","path":"objects/PushableWallDrawerObj/PushableWallDrawerObj.yy",},"order":6,},
     {"id":{"name":"DrawerMSpr","path":"sprites/DrawerMSpr/DrawerMSpr.yy",},"order":0,},
     {"id":{"name":"BlueFloorObj","path":"objects/BlueFloorObj/BlueFloorObj.yy",},"order":3,},
@@ -105,6 +106,7 @@
     {"folderPath":"folders/Sprites/Barriers.yy","order":7,"resourceVersion":"1.0","name":"Barriers","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Barriers.yy","order":9,"resourceVersion":"1.0","name":"Barriers","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sounds/Player.yy","order":1,"resourceVersion":"1.0","name":"Player","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Player/PlayerShoot.yy","order":11,"resourceVersion":"1.0","name":"PlayerShoot","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
