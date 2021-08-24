@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"LadderFatObj","path":"objects/LadderFatObj/LadderFatObj.yy",},"order":3,},
+    {"id":{"name":"PlayerReloadSpr","path":"sprites/PlayerReloadSpr/PlayerReloadSpr.yy",},"order":8,},
     {"id":{"name":"BarrierDrawerMObj","path":"objects/BarrierDrawerMObj/BarrierDrawerMObj.yy",},"order":2,},
     {"id":{"name":"PlayerObj","path":"objects/PlayerObj/PlayerObj.yy",},"order":1,},
     {"id":{"name":"LadderObj","path":"objects/LadderObj/LadderObj.yy",},"order":0,},
