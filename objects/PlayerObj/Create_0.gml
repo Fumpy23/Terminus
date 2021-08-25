@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7C7918CC
-/// @DnDInput : 28
+/// @DnDInput : 32
 /// @DnDArgument : "expr_2" "2"
 /// @DnDArgument : "expr_3" "300"
 /// @DnDArgument : "expr_4" "blink_time_max"
@@ -43,6 +43,10 @@
 /// @DnDArgument : "var_25" "walking_sound_delay"
 /// @DnDArgument : "var_26" "climbing_sound_delay_max"
 /// @DnDArgument : "var_27" "climbing_sound_delay"
+/// @DnDArgument : "var_28" "can_player_ready_shoot"
+/// @DnDArgument : "var_29" "can_player_shoot"
+/// @DnDArgument : "var_30" "button_ready_shoot"
+/// @DnDArgument : "var_31" "button_shoot"
 button_left = 0;
 button_right = 0;
 run_speed = 2;
@@ -71,6 +75,10 @@ walking_sound_delay_max = 15;
 walking_sound_delay = 0;
 climbing_sound_delay_max = 15;
 climbing_sound_delay = 0;
+can_player_ready_shoot = 0;
+can_player_shoot = 0;
+button_ready_shoot = 0;
+button_shoot = 0;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1

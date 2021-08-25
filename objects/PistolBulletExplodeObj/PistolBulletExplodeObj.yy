@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "PlayerDropLColSpr",
-    "path": "sprites/PlayerDropLColSpr/PlayerDropLColSpr.yy",
+    "name": "PistolBulletExplodeSpr",
+    "path": "sprites/PistolBulletExplodeSpr/PistolBulletExplodeSpr.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,11 +26,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Player",
-    "path": "folders/Objects/Player.yy",
+    "name": "Guns_Bullets",
+    "path": "folders/Objects/Player/Guns_Bullets.yy",
   },
   "resourceVersion": "1.0",
-  "name": "PlayerDropLColObj",
+  "name": "PistolBulletExplodeObj",
   "tags": [],
   "resourceType": "GMObject",
 }

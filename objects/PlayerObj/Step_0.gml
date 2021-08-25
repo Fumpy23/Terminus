@@ -76,7 +76,7 @@ can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallOb
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 308067B2
-/// @DnDInput : 12
+/// @DnDInput : 15
 /// @DnDArgument : "expr" "keyboard_check(ord("A"))"
 /// @DnDArgument : "expr_1" "keyboard_check(ord("D"))"
 /// @DnDArgument : "expr_2" "(((button_right * can_player_move_right) - (button_left * can_player_move_left)) * run_speed * !is_player_climbing * !is_player_falling * !is_player_pushing) + (is_player_pushing * player_pushing_speed)"
@@ -88,6 +88,9 @@ can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallOb
 /// @DnDArgument : "expr_9" "keyboard_check(ord("W"))"
 /// @DnDArgument : "expr_10" "walking_sound_delay - 1"
 /// @DnDArgument : "expr_11" "climbing_sound_delay - 1"
+/// @DnDArgument : "expr_12" "keyboard_check_pressed(ord("U"))"
+/// @DnDArgument : "expr_13" "keyboard_check_pressed(ord("H"))"
+/// @DnDArgument : "expr_14" "!is_player_climbing && !is_player_falling && !is_player_pushing && !is_contextual_button_being_used"
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
 /// @DnDArgument : "var_2" "hspeed"
@@ -100,6 +103,9 @@ can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallOb
 /// @DnDArgument : "var_9" "button_up"
 /// @DnDArgument : "var_10" "walking_sound_delay"
 /// @DnDArgument : "var_11" "climbing_sound_delay"
+/// @DnDArgument : "var_12" "button_ready_shoot"
+/// @DnDArgument : "var_13" "button_shoot"
+/// @DnDArgument : "var_14" "can_player_ready_shoot"
 button_left = keyboard_check(ord("A"));
 button_right = keyboard_check(ord("D"));
 hspeed = (((button_right * can_player_move_right) - (button_left * can_player_move_left)) * run_speed * !is_player_climbing * !is_player_falling * !is_player_pushing) + (is_player_pushing * player_pushing_speed);
@@ -112,6 +118,9 @@ button_contextual_hold = keyboard_check(ord("I"));
 button_up = keyboard_check(ord("W"));
 walking_sound_delay = walking_sound_delay - 1;
 climbing_sound_delay = climbing_sound_delay - 1;
+button_ready_shoot = keyboard_check_pressed(ord("U"));
+button_shoot = keyboard_check_pressed(ord("H"));
+can_player_ready_shoot = !is_player_climbing && !is_player_falling && !is_player_pushing && !is_contextual_button_being_used;
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
@@ -689,4 +698,49 @@ else
 			}
 		}
 	}
+}
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 2B963463
+/// @DnDDisabled : 1
+/// @DnDArgument : "expr" "keyboard_check_pressed(ord("J"))"
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 48964ED1
+/// @DnDDisabled : 1
+/// @DnDParent : 2B963463
+/// @DnDArgument : "xpos" "sprite_width / 2"
+/// @DnDArgument : "xpos_relative" "1"
+/// @DnDArgument : "ypos" "-sprite_height / 2"
+/// @DnDArgument : "ypos_relative" "1"
+/// @DnDArgument : "var" "bullet_inst"
+/// @DnDArgument : "objectid" "PistolBulletObj"
+/// @DnDArgument : "layer" ""Front""
+/// @DnDSaveInfo : "objectid" "PistolBulletObj"
+
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 397D894E
+/// @DnDDisabled : 1
+/// @DnDParent : 2B963463
+/// @DnDArgument : "expr" "10"
+/// @DnDArgument : "var" "bullet_inst.hspeed"
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 1C1EEC38
+/// @DnDArgument : "expr" "button_ready_shoot"
+if(button_ready_shoot)
+{
+	/// @DnDAction : YoYo Games.Instances.Set_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 4EC531AD
+	/// @DnDParent : 1C1EEC38
+	/// @DnDArgument : "imageind_relative" "1"
+	/// @DnDArgument : "spriteind" "PlayerShootReadySpr"
+	/// @DnDSaveInfo : "spriteind" "PlayerShootReadySpr"
+	sprite_index = PlayerShootReadySpr;
+	image_index += 0;
 }
