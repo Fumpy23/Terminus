@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7C7918CC
-/// @DnDInput : 32
+/// @DnDInput : 36
 /// @DnDArgument : "expr_2" "2"
 /// @DnDArgument : "expr_3" "300"
 /// @DnDArgument : "expr_4" "blink_time_max"
@@ -15,6 +15,7 @@
 /// @DnDArgument : "expr_21" "noone"
 /// @DnDArgument : "expr_24" "15"
 /// @DnDArgument : "expr_26" "15"
+/// @DnDArgument : "expr_32" "1"
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
 /// @DnDArgument : "var_2" "run_speed"
@@ -47,6 +48,10 @@
 /// @DnDArgument : "var_29" "can_player_shoot"
 /// @DnDArgument : "var_30" "button_ready_shoot"
 /// @DnDArgument : "var_31" "button_shoot"
+/// @DnDArgument : "var_32" "is_player_readying_shoot"
+/// @DnDArgument : "var_33" "is_player_finishing_shoot"
+/// @DnDArgument : "var_34" "is_gun_being_raised"
+/// @DnDArgument : "var_35" "is_gun_being_lowered"
 button_left = 0;
 button_right = 0;
 run_speed = 2;
@@ -79,6 +84,10 @@ can_player_ready_shoot = 0;
 can_player_shoot = 0;
 button_ready_shoot = 0;
 button_shoot = 0;
+is_player_readying_shoot = 1;
+is_player_finishing_shoot = 0;
+is_gun_being_raised = 0;
+is_gun_being_lowered = 0;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
