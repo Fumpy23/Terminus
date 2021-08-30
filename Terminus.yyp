@@ -44,7 +44,7 @@
     {"id":{"name":"PlayerShootDSpr","path":"sprites/PlayerShootDSpr/PlayerShootDSpr.yy",},"order":7,},
     {"id":{"name":"PlayerShootReadySpr","path":"sprites/PlayerShootReadySpr/PlayerShootReadySpr.yy",},"order":1,},
     {"id":{"name":"DrawerWallObj","path":"objects/DrawerWallObj/DrawerWallObj.yy",},"order":3,},
-    {"id":{"name":"PlayerDropLColSpr","path":"sprites/PlayerDropLColSpr/PlayerDropLColSpr.yy",},"order":10,},
+    {"id":{"name":"PlayerReticleColSpr","path":"sprites/PlayerReticleColSpr/PlayerReticleColSpr.yy",},"order":10,},
     {"id":{"name":"DebugRoom2","path":"rooms/DebugRoom2/DebugRoom2.yy",},"order":1,},
     {"id":{"name":"PlayerShootTestSpr","path":"sprites/PlayerShootTestSpr/PlayerShootTestSpr.yy",},"order":5,},
     {"id":{"name":"PlayerFallingSpr","path":"sprites/PlayerFallingSpr/PlayerFallingSpr.yy",},"order":7,},

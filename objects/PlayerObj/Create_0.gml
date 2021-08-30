@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7C7918CC
-/// @DnDInput : 36
+/// @DnDInput : 37
 /// @DnDArgument : "expr_2" "2"
 /// @DnDArgument : "expr_3" "300"
 /// @DnDArgument : "expr_4" "blink_time_max"
@@ -15,6 +15,8 @@
 /// @DnDArgument : "expr_21" "noone"
 /// @DnDArgument : "expr_24" "15"
 /// @DnDArgument : "expr_26" "15"
+/// @DnDArgument : "expr_28" "1"
+/// @DnDArgument : "expr_29" "1"
 /// @DnDArgument : "expr_32" "1"
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
@@ -52,6 +54,7 @@
 /// @DnDArgument : "var_33" "is_player_finishing_shoot"
 /// @DnDArgument : "var_34" "is_gun_being_raised"
 /// @DnDArgument : "var_35" "is_gun_being_lowered"
+/// @DnDArgument : "var_36" "is_player_shooting"
 button_left = 0;
 button_right = 0;
 run_speed = 2;
@@ -80,14 +83,15 @@ walking_sound_delay_max = 15;
 walking_sound_delay = 0;
 climbing_sound_delay_max = 15;
 climbing_sound_delay = 0;
-can_player_ready_shoot = 0;
-can_player_shoot = 0;
+can_player_ready_shoot = 1;
+can_player_shoot = 1;
 button_ready_shoot = 0;
 button_shoot = 0;
 is_player_readying_shoot = 1;
 is_player_finishing_shoot = 0;
 is_gun_being_raised = 0;
 is_gun_being_lowered = 0;
+is_player_shooting = 0;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
@@ -110,3 +114,14 @@ contextual_inst = instance_create_layer(x + 0, y + 0, "Front", ContextualButtonO
 /// @DnDArgument : "layer" ""Back""
 /// @DnDSaveInfo : "objectid" "PlayerDropColObj"
 player_drop_inst = instance_create_layer(x + 0, y + 0, "Back", PlayerDropColObj);
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 018BB865
+/// @DnDArgument : "xpos_relative" "1"
+/// @DnDArgument : "ypos_relative" "1"
+/// @DnDArgument : "var" "player_reticle_inst"
+/// @DnDArgument : "objectid" "PlayerShootReticleObj"
+/// @DnDArgument : "layer" ""Front""
+/// @DnDSaveInfo : "objectid" "PlayerShootReticleObj"
+player_reticle_inst = instance_create_layer(x + 0, y + 0, "Front", PlayerShootReticleObj);
