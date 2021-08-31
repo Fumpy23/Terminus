@@ -180,8 +180,8 @@ else
 /// @DnDAction : YoYo Games.Common.Execute_Code
 /// @DnDVersion : 1
 /// @DnDHash : 197252DC
-/// @DnDArgument : "code" "var collision_array = [];$(13_10)var obj_inst = null;$(13_10)$(13_10)for (var i = 0; i < instance_number(WallObj); i += 1) {$(13_10)	obj_inst = instance_find(WallObj, i);$(13_10)	if (place_meeting(x, y, obj_inst)) {$(13_10)		collision_array[array_length_1d(collision_array)] = obj_inst;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(FloorObj); i += 1) {$(13_10)	obj_inst = instance_find(FloorObj, i);$(13_10)	if (place_meeting(x, y, obj_inst)) {$(13_10)		collision_array[array_length_1d(collision_array)] = obj_inst;$(13_10)	}$(13_10)}$(13_10)$(13_10)var shortest_dist = 460;$(13_10)var shoot_x = 0;$(13_10)var shoot_y = 0;$(13_10)$(13_10)for (var i = 0; i <array_length_1d(collision_array); i += 1) {$(13_10)	if (PlayerObj.sprite_index == PlayerShootUSpr) {$(13_10)		shoot_x = x;$(13_10)		shoot_y = collision_array[i].y;$(13_10)	}$(13_10)	collision_array[i].x $(13_10)	/*if (sqrt(sqr(x - collision_array[i].x) + sqr(y - collision_array[i].y)) < shortest_dist) {$(13_10)		shortest_dist = sqrt(sqr(x - collision_array[i].x) + sqr(y - collision_array[i].y));$(13_10)		shoot_x = collision_$(13_10)	}*/$(13_10)}"
-var collision_array = [];
+/// @DnDArgument : "code" "/*var collision_array = [];$(13_10)var obj_inst = null;$(13_10)$(13_10)for (var i = 0; i < instance_number(WallObj); i += 1) {$(13_10)	obj_inst = instance_find(WallObj, i);$(13_10)	if (place_meeting(x, y, obj_inst)) {$(13_10)		collision_array[array_length_1d(collision_array)] = obj_inst;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(FloorObj); i += 1) {$(13_10)	obj_inst = instance_find(FloorObj, i);$(13_10)	if (place_meeting(x, y, obj_inst)) {$(13_10)		collision_array[array_length_1d(collision_array)] = obj_inst;$(13_10)	}$(13_10)}$(13_10)$(13_10)var shortest_dist = 460;$(13_10)var shoot_x = 0;$(13_10)var shoot_y = 0;$(13_10)$(13_10)for (var i = 0; i <array_length_1d(collision_array); i += 1) {$(13_10)	if (PlayerObj.sprite_index == PlayerShootUSpr) {$(13_10)		shoot_x = x;$(13_10)		shoot_y = collision_array[i].y;$(13_10)	}$(13_10)	collision_array[i].x $(13_10)	if (sqrt(sqr(x - collision_array[i].x) + sqr(y - collision_array[i].y)) < shortest_dist) {$(13_10)		shortest_dist = sqrt(sqr(x - collision_array[i].x) + sqr(y - collision_array[i].y));$(13_10)		shoot_x = collision_$(13_10)	}$(13_10)}*/"
+/*var collision_array = [];
 var obj_inst = null;
 
 for (var i = 0; i < instance_number(WallObj); i += 1) {
@@ -208,8 +208,8 @@ for (var i = 0; i <array_length_1d(collision_array); i += 1) {
 		shoot_y = collision_array[i].y;
 	}
 	collision_array[i].x 
-	/*if (sqrt(sqr(x - collision_array[i].x) + sqr(y - collision_array[i].y)) < shortest_dist) {
+	if (sqrt(sqr(x - collision_array[i].x) + sqr(y - collision_array[i].y)) < shortest_dist) {
 		shortest_dist = sqrt(sqr(x - collision_array[i].x) + sqr(y - collision_array[i].y));
 		shoot_x = collision_
-	}*/
-}/**/
+	}
+}*//**/
