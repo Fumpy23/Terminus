@@ -177,21 +177,24 @@ if(is_player_climbing)
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 6DFC285B
-			/// @DnDInput : 6
+			/// @DnDInput : 7
 			/// @DnDParent : 1F1DE04F
 			/// @DnDArgument : "expr_5" "noone"
+			/// @DnDArgument : "expr_6" "button_left ? -1 : (button_right ? 1 : image_xscale)"
 			/// @DnDArgument : "var" "contextual_inst.visible"
 			/// @DnDArgument : "var_1" "is_contextual_button_being_used"
 			/// @DnDArgument : "var_2" "is_player_climbing"
 			/// @DnDArgument : "var_3" "can_player_drop"
 			/// @DnDArgument : "var_4" "button_down"
 			/// @DnDArgument : "var_5" "climbable_inst"
+			/// @DnDArgument : "var_6" "image_xscale"
 			contextual_inst.visible = 0;
 			is_contextual_button_being_used = 0;
 			is_player_climbing = 0;
 			can_player_drop = 0;
 			button_down = 0;
 			climbable_inst = noone;
+			image_xscale = button_left ? -1 : (button_right ? 1 : image_xscale);
 		
 			/// @DnDAction : YoYo Games.Instances.Set_Sprite
 			/// @DnDVersion : 1
@@ -256,21 +259,24 @@ if(is_player_climbing)
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 6A418A1D
-			/// @DnDInput : 6
+			/// @DnDInput : 7
 			/// @DnDParent : 4BC78989
 			/// @DnDArgument : "expr_5" "noone"
+			/// @DnDArgument : "expr_6" "button_left ? -1 : (button_right ? 1 : image_xscale)"
 			/// @DnDArgument : "var" "contextual_inst.visible"
 			/// @DnDArgument : "var_1" "is_contextual_button_being_used"
 			/// @DnDArgument : "var_2" "is_player_climbing"
 			/// @DnDArgument : "var_3" "can_player_drop"
 			/// @DnDArgument : "var_4" "button_down"
 			/// @DnDArgument : "var_5" "climbable_inst"
+			/// @DnDArgument : "var_6" "image_xscale"
 			contextual_inst.visible = 0;
 			is_contextual_button_being_used = 0;
 			is_player_climbing = 0;
 			can_player_drop = 0;
 			button_down = 0;
 			climbable_inst = noone;
+			image_xscale = button_left ? -1 : (button_right ? 1 : image_xscale);
 		
 			/// @DnDAction : YoYo Games.Instances.Set_Sprite
 			/// @DnDVersion : 1
@@ -359,18 +365,21 @@ else
 			/// @DnDAction : YoYo Games.Common.Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 364E9B42
-			/// @DnDInput : 4
+			/// @DnDInput : 5
 			/// @DnDParent : 0B949CB6
 			/// @DnDArgument : "expr_2" "floor_inst.y - floor_inst.sprite_height"
 			/// @DnDArgument : "expr_3" "noone"
+			/// @DnDArgument : "expr_4" "button_left ? -1 : (button_right ? 1 : image_xscale)"
 			/// @DnDArgument : "var" "is_player_falling"
 			/// @DnDArgument : "var_1" "vspeed"
 			/// @DnDArgument : "var_2" "y"
 			/// @DnDArgument : "var_3" "floor_inst"
+			/// @DnDArgument : "var_4" "image_xscale"
 			is_player_falling = 0;
 			vspeed = 0;
 			y = floor_inst.y - floor_inst.sprite_height;
 			floor_inst = noone;
+			image_xscale = button_left ? -1 : (button_right ? 1 : image_xscale);
 		
 			/// @DnDAction : YoYo Games.Instances.Set_Sprite
 			/// @DnDVersion : 1
@@ -466,20 +475,23 @@ else
 				/// @DnDAction : YoYo Games.Common.Variable
 				/// @DnDVersion : 1
 				/// @DnDHash : 169BC0A1
-				/// @DnDInput : 5
+				/// @DnDInput : 6
 				/// @DnDParent : 0C14B598
 				/// @DnDArgument : "expr_1" "x - (hspeed * 4)"
 				/// @DnDArgument : "expr_3" "noone"
+				/// @DnDArgument : "expr_5" "button_left ? -1 : (button_right ? 1 : image_xscale)"
 				/// @DnDArgument : "var" "is_player_pushing"
 				/// @DnDArgument : "var_1" "x"
 				/// @DnDArgument : "var_2" "pushable_inst.hspeed"
 				/// @DnDArgument : "var_3" "pushable_inst"
 				/// @DnDArgument : "var_4" "hspeed"
+				/// @DnDArgument : "var_5" "image_xscale"
 				is_player_pushing = 0;
 				x = x - (hspeed * 4);
 				pushable_inst.hspeed = 0;
 				pushable_inst = noone;
 				hspeed = 0;
+				image_xscale = button_left ? -1 : (button_right ? 1 : image_xscale);
 			
 				/// @DnDAction : YoYo Games.Instances.Set_Sprite
 				/// @DnDVersion : 1
@@ -746,12 +758,12 @@ else
 										/// @DnDHash : 0077BC69
 										/// @DnDParent : 148CDE72
 										/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 11 : -11)"
-										/// @DnDArgument : "ypos" "y - sprite_height + (image_xscale == 1 ? 4 : 5)"
+										/// @DnDArgument : "ypos" "y - sprite_height + 4"
 										/// @DnDArgument : "var" "pistol_bullet_inst"
 										/// @DnDArgument : "objectid" "PistolBulletObj"
 										/// @DnDArgument : "layer" ""Front""
 										/// @DnDSaveInfo : "objectid" "PistolBulletObj"
-										pistol_bullet_inst = instance_create_layer(x + (image_xscale == 1 ? 11 : -11), y - sprite_height + (image_xscale == 1 ? 4 : 5), "Front", PistolBulletObj);
+										pistol_bullet_inst = instance_create_layer(x + (image_xscale == 1 ? 11 : -11), y - sprite_height + 4, "Front", PistolBulletObj);
 									
 										/// @DnDAction : YoYo Games.Common.Variable
 										/// @DnDVersion : 1
@@ -957,13 +969,13 @@ else
 											/// @DnDVersion : 1
 											/// @DnDHash : 6C955479
 											/// @DnDParent : 58EF4434
-											/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 10 : -10)"
+											/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 10 : -12)"
 											/// @DnDArgument : "ypos" "y - (image_xscale == 1 ? 10 : 9)"
 											/// @DnDArgument : "var" "pistol_bullet_inst"
 											/// @DnDArgument : "objectid" "PistolBulletObj"
 											/// @DnDArgument : "layer" ""Front""
 											/// @DnDSaveInfo : "objectid" "PistolBulletObj"
-											pistol_bullet_inst = instance_create_layer(x + (image_xscale == 1 ? 10 : -10), y - (image_xscale == 1 ? 10 : 9), "Front", PistolBulletObj);
+											pistol_bullet_inst = instance_create_layer(x + (image_xscale == 1 ? 10 : -12), y - (image_xscale == 1 ? 10 : 9), "Front", PistolBulletObj);
 										
 											/// @DnDAction : YoYo Games.Common.Variable
 											/// @DnDVersion : 1
@@ -1056,13 +1068,13 @@ else
 											/// @DnDVersion : 1
 											/// @DnDHash : 2BA27491
 											/// @DnDParent : 777A86D4
-											/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 0 : 1)"
+											/// @DnDArgument : "xpos" "x - (image_xscale == 1 ? 1 : 0)"
 											/// @DnDArgument : "ypos" "y + 1"
 											/// @DnDArgument : "var" "pistol_bullet_inst"
 											/// @DnDArgument : "objectid" "PistolBulletObj"
 											/// @DnDArgument : "layer" ""Front""
 											/// @DnDSaveInfo : "objectid" "PistolBulletObj"
-											pistol_bullet_inst = instance_create_layer(x + (image_xscale == 1 ? 0 : 1), y + 1, "Front", PistolBulletObj);
+											pistol_bullet_inst = instance_create_layer(x - (image_xscale == 1 ? 1 : 0), y + 1, "Front", PistolBulletObj);
 										
 											/// @DnDAction : YoYo Games.Common.Variable
 											/// @DnDVersion : 1
@@ -1156,12 +1168,12 @@ else
 										/// @DnDHash : 6AA249D2
 										/// @DnDParent : 10940620
 										/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 12 : -12)"
-										/// @DnDArgument : "ypos" "y - sprite_height + (image_xscale == 1 ? 8 : 9)"
+										/// @DnDArgument : "ypos" "y - sprite_height + (image_xscale == 1 ? 8 : 8)"
 										/// @DnDArgument : "var" "pistol_bullet_inst"
 										/// @DnDArgument : "objectid" "PistolBulletObj"
 										/// @DnDArgument : "layer" ""Front""
 										/// @DnDSaveInfo : "objectid" "PistolBulletObj"
-										pistol_bullet_inst = instance_create_layer(x + (image_xscale == 1 ? 12 : -12), y - sprite_height + (image_xscale == 1 ? 8 : 9), "Front", PistolBulletObj);
+										pistol_bullet_inst = instance_create_layer(x + (image_xscale == 1 ? 12 : -12), y - sprite_height + (image_xscale == 1 ? 8 : 8), "Front", PistolBulletObj);
 									
 										/// @DnDAction : YoYo Games.Common.Variable
 										/// @DnDVersion : 1
@@ -1251,15 +1263,18 @@ else
 							/// @DnDAction : YoYo Games.Common.Variable
 							/// @DnDVersion : 1
 							/// @DnDHash : 1C33AC12
-							/// @DnDInput : 3
+							/// @DnDInput : 4
 							/// @DnDParent : 09470721
 							/// @DnDArgument : "expr_2" "1"
+							/// @DnDArgument : "expr_3" "button_left ? -1 : (button_right ? 1 : image_xscale)"
 							/// @DnDArgument : "var" "is_player_finishing_shoot"
 							/// @DnDArgument : "var_1" "is_gun_being_lowered"
 							/// @DnDArgument : "var_2" "can_player_ready_shoot"
+							/// @DnDArgument : "var_3" "image_xscale"
 							is_player_finishing_shoot = 0;
 							is_gun_being_lowered = 0;
 							can_player_ready_shoot = 1;
+							image_xscale = button_left ? -1 : (button_right ? 1 : image_xscale);
 						}
 					}
 				
