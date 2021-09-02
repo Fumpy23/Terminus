@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7C7918CC
-/// @DnDInput : 37
+/// @DnDInput : 38
 /// @DnDArgument : "expr_2" "2"
 /// @DnDArgument : "expr_3" "300"
 /// @DnDArgument : "expr_4" "blink_time_max"
@@ -55,6 +55,7 @@
 /// @DnDArgument : "var_34" "is_gun_being_raised"
 /// @DnDArgument : "var_35" "is_gun_being_lowered"
 /// @DnDArgument : "var_36" "is_player_shooting"
+/// @DnDArgument : "var_37" "is_reticle_attached"
 button_left = 0;
 button_right = 0;
 run_speed = 2;
@@ -92,6 +93,7 @@ is_player_finishing_shoot = 0;
 is_gun_being_raised = 0;
 is_gun_being_lowered = 0;
 is_player_shooting = 0;
+is_reticle_attached = 0;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
@@ -122,6 +124,6 @@ player_drop_inst = instance_create_layer(x + 0, y + 0, "Back", PlayerDropColObj)
 /// @DnDArgument : "ypos_relative" "1"
 /// @DnDArgument : "var" "player_reticle_inst"
 /// @DnDArgument : "objectid" "PlayerShootReticleObj"
-/// @DnDArgument : "layer" ""Front""
+/// @DnDArgument : "layer" ""Middlin""
 /// @DnDSaveInfo : "objectid" "PlayerShootReticleObj"
-player_reticle_inst = instance_create_layer(x + 0, y + 0, "Front", PlayerShootReticleObj);
+player_reticle_inst = instance_create_layer(x + 0, y + 0, "Middlin", PlayerShootReticleObj);

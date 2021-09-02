@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "PistolBulletSpr",
-    "path": "sprites/PistolBulletSpr/PistolBulletSpr.yy",
+    "name": "PistolBulletFlashSpr",
+    "path": "sprites/PistolBulletFlashSpr/PistolBulletFlashSpr.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -22,7 +22,6 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":true,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":true,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -31,7 +30,7 @@
     "path": "folders/Objects/Player/Guns_Bullets.yy",
   },
   "resourceVersion": "1.0",
-  "name": "PistolBulletObj",
+  "name": "PistolBulletFlashObj",
   "tags": [],
   "resourceType": "GMObject",
 }

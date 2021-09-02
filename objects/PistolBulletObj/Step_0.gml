@@ -16,14 +16,12 @@ while (!(x - 5 > room_width || x + 5 < 0 || y + 5 < 0 || y - 5 > room_height == 
 		/// @DnDVersion : 1
 		/// @DnDHash : 2CA75AEC
 		/// @DnDParent : 1DC1207A
-		/// @DnDArgument : "xpos" "round(-x_step / 2)"
 		/// @DnDArgument : "xpos_relative" "1"
-		/// @DnDArgument : "ypos" "round(-y_step / 2)"
 		/// @DnDArgument : "ypos_relative" "1"
 		/// @DnDArgument : "objectid" "PistolBulletExplodeObj"
 		/// @DnDArgument : "layer" ""Front""
 		/// @DnDSaveInfo : "objectid" "PistolBulletExplodeObj"
-		instance_create_layer(x + round(-x_step / 2), y + round(-y_step / 2), "Front", PistolBulletExplodeObj);
+		instance_create_layer(x + 0, y + 0, "Front", PistolBulletExplodeObj);
 	
 		/// @DnDAction : YoYo Games.Instances.Destroy_Instance
 		/// @DnDVersion : 1

@@ -30,8 +30,9 @@ if(PlayerObj.is_gun_being_lowered && PlayerObj.can_player_ready_shoot)
 		/// @DnDVersion : 1
 		/// @DnDHash : 164EFA71
 		/// @DnDParent : 4D6FBF02
+		/// @DnDArgument : "expr" "PlayerObj.is_reticle_attached"
 		/// @DnDArgument : "var" "visible"
-		visible = 0;
+		visible = PlayerObj.is_reticle_attached;
 	}
 
 	/// @DnDAction : YoYo Games.Common.If_Expression
@@ -61,8 +62,9 @@ if(PlayerObj.is_gun_being_lowered && PlayerObj.can_player_ready_shoot)
 		/// @DnDVersion : 1
 		/// @DnDHash : 7A5C9DCC
 		/// @DnDParent : 4F8326C9
+		/// @DnDArgument : "expr" "PlayerObj.is_reticle_attached"
 		/// @DnDArgument : "var" "visible"
-		visible = 0;
+		visible = PlayerObj.is_reticle_attached;
 	}
 
 	/// @DnDAction : YoYo Games.Common.If_Expression
@@ -92,8 +94,9 @@ if(PlayerObj.is_gun_being_lowered && PlayerObj.can_player_ready_shoot)
 		/// @DnDVersion : 1
 		/// @DnDHash : 73CD75DB
 		/// @DnDParent : 540B14C4
+		/// @DnDArgument : "expr" "PlayerObj.is_reticle_attached"
 		/// @DnDArgument : "var" "visible"
-		visible = 0;
+		visible = PlayerObj.is_reticle_attached;
 	}
 
 	/// @DnDAction : YoYo Games.Common.If_Expression
@@ -123,8 +126,9 @@ if(PlayerObj.is_gun_being_lowered && PlayerObj.can_player_ready_shoot)
 		/// @DnDVersion : 1
 		/// @DnDHash : 43FC0A09
 		/// @DnDParent : 1D531C6F
+		/// @DnDArgument : "expr" "PlayerObj.is_reticle_attached"
 		/// @DnDArgument : "var" "visible"
-		visible = 0;
+		visible = PlayerObj.is_reticle_attached;
 	}
 
 	/// @DnDAction : YoYo Games.Common.If_Expression
@@ -154,8 +158,9 @@ if(PlayerObj.is_gun_being_lowered && PlayerObj.can_player_ready_shoot)
 		/// @DnDVersion : 1
 		/// @DnDHash : 5493A640
 		/// @DnDParent : 2EF3253B
+		/// @DnDArgument : "expr" "PlayerObj.is_reticle_attached"
 		/// @DnDArgument : "var" "visible"
-		visible = 0;
+		visible = PlayerObj.is_reticle_attached;
 	}
 }
 
@@ -171,40 +176,3 @@ else
 	/// @DnDArgument : "var" "visible"
 	visible = 0;
 }
-
-/// @DnDAction : YoYo Games.Common.Execute_Code
-/// @DnDVersion : 1
-/// @DnDHash : 197252DC
-/// @DnDArgument : "code" "/*var collision_array = [];$(13_10)var obj_inst = null;$(13_10)$(13_10)for (var i = 0; i < instance_number(WallObj); i += 1) {$(13_10)	obj_inst = instance_find(WallObj, i);$(13_10)	if (place_meeting(x, y, obj_inst)) {$(13_10)		collision_array[array_length_1d(collision_array)] = obj_inst;$(13_10)	}$(13_10)}$(13_10)$(13_10)for (var i = 0; i < instance_number(FloorObj); i += 1) {$(13_10)	obj_inst = instance_find(FloorObj, i);$(13_10)	if (place_meeting(x, y, obj_inst)) {$(13_10)		collision_array[array_length_1d(collision_array)] = obj_inst;$(13_10)	}$(13_10)}$(13_10)$(13_10)var shortest_dist = 460;$(13_10)var shoot_x = 0;$(13_10)var shoot_y = 0;$(13_10)$(13_10)for (var i = 0; i <array_length_1d(collision_array); i += 1) {$(13_10)	if (PlayerObj.sprite_index == PlayerShootUSpr) {$(13_10)		shoot_x = x;$(13_10)		shoot_y = collision_array[i].y;$(13_10)	}$(13_10)	collision_array[i].x $(13_10)	if (sqrt(sqr(x - collision_array[i].x) + sqr(y - collision_array[i].y)) < shortest_dist) {$(13_10)		shortest_dist = sqrt(sqr(x - collision_array[i].x) + sqr(y - collision_array[i].y));$(13_10)		shoot_x = collision_$(13_10)	}$(13_10)}*/"
-/*var collision_array = [];
-var obj_inst = null;
-
-for (var i = 0; i < instance_number(WallObj); i += 1) {
-	obj_inst = instance_find(WallObj, i);
-	if (place_meeting(x, y, obj_inst)) {
-		collision_array[array_length_1d(collision_array)] = obj_inst;
-	}
-}
-
-for (var i = 0; i < instance_number(FloorObj); i += 1) {
-	obj_inst = instance_find(FloorObj, i);
-	if (place_meeting(x, y, obj_inst)) {
-		collision_array[array_length_1d(collision_array)] = obj_inst;
-	}
-}
-
-var shortest_dist = 460;
-var shoot_x = 0;
-var shoot_y = 0;
-
-for (var i = 0; i <array_length_1d(collision_array); i += 1) {
-	if (PlayerObj.sprite_index == PlayerShootUSpr) {
-		shoot_x = x;
-		shoot_y = collision_array[i].y;
-	}
-	collision_array[i].x 
-	if (sqrt(sqr(x - collision_array[i].x) + sqr(y - collision_array[i].y)) < shortest_dist) {
-		shortest_dist = sqrt(sqr(x - collision_array[i].x) + sqr(y - collision_array[i].y));
-		shoot_x = collision_
-	}
-}*//**/
