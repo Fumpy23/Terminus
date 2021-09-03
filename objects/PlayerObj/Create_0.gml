@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7C7918CC
-/// @DnDInput : 38
+/// @DnDInput : 43
 /// @DnDArgument : "expr_2" "2"
 /// @DnDArgument : "expr_3" "300"
 /// @DnDArgument : "expr_4" "blink_time_max"
@@ -18,6 +18,8 @@
 /// @DnDArgument : "expr_28" "1"
 /// @DnDArgument : "expr_29" "1"
 /// @DnDArgument : "expr_32" "1"
+/// @DnDArgument : "expr_41" "1"
+/// @DnDArgument : "expr_42" "noone"
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
 /// @DnDArgument : "var_2" "run_speed"
@@ -56,6 +58,10 @@
 /// @DnDArgument : "var_35" "is_gun_being_lowered"
 /// @DnDArgument : "var_36" "is_player_shooting"
 /// @DnDArgument : "var_37" "is_reticle_attached"
+/// @DnDArgument : "var_39" "button_reload"
+/// @DnDArgument : "var_40" "is_player_reloading"
+/// @DnDArgument : "var_41" "can_player_reload"
+/// @DnDArgument : "var_42" "player_pistol_inst"
 button_left = 0;
 button_right = 0;
 run_speed = 2;
@@ -94,6 +100,11 @@ is_gun_being_raised = 0;
 is_gun_being_lowered = 0;
 is_player_shooting = 0;
 is_reticle_attached = 0;
+variable = 0;
+button_reload = 0;
+is_player_reloading = 0;
+can_player_reload = 1;
+player_pistol_inst = noone;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
@@ -127,3 +138,14 @@ player_drop_inst = instance_create_layer(x + 0, y + 0, "Back", PlayerDropColObj)
 /// @DnDArgument : "layer" ""Middlin""
 /// @DnDSaveInfo : "objectid" "PlayerShootReticleObj"
 player_reticle_inst = instance_create_layer(x + 0, y + 0, "Middlin", PlayerShootReticleObj);
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 66C84916
+/// @DnDArgument : "xpos_relative" "1"
+/// @DnDArgument : "ypos_relative" "1"
+/// @DnDArgument : "var" "player_pistol_inst"
+/// @DnDArgument : "objectid" "PistolCarryObj"
+/// @DnDArgument : "layer" ""Front""
+/// @DnDSaveInfo : "objectid" "PistolCarryObj"
+player_pistol_inst = instance_create_layer(x + 0, y + 0, "Front", PistolCarryObj);
