@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7C7918CC
-/// @DnDInput : 43
+/// @DnDInput : 45
 /// @DnDArgument : "expr_2" "2"
 /// @DnDArgument : "expr_3" "300"
 /// @DnDArgument : "expr_4" "blink_time_max"
@@ -20,6 +20,7 @@
 /// @DnDArgument : "expr_32" "1"
 /// @DnDArgument : "expr_41" "1"
 /// @DnDArgument : "expr_42" "noone"
+/// @DnDArgument : "expr_43" "MeatItemObj"
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
 /// @DnDArgument : "var_2" "run_speed"
@@ -62,6 +63,8 @@
 /// @DnDArgument : "var_40" "is_player_reloading"
 /// @DnDArgument : "var_41" "can_player_reload"
 /// @DnDArgument : "var_42" "player_pistol_inst"
+/// @DnDArgument : "var_43" "player_item_inst"
+/// @DnDArgument : "var_44" "is_player_using_item"
 button_left = 0;
 button_right = 0;
 run_speed = 2;
@@ -105,6 +108,8 @@ button_reload = 0;
 is_player_reloading = 0;
 can_player_reload = 1;
 player_pistol_inst = noone;
+player_item_inst = MeatItemObj;
+is_player_using_item = 0;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1

@@ -7,8 +7,8 @@ contextual_inst.visible = 0;
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 2DCC412F
-/// @DnDArgument : "expr" "!button_ready_shoot && !is_player_shooting && !is_player_finishing_shoot"
-if(!button_ready_shoot && !is_player_shooting && !is_player_finishing_shoot)
+/// @DnDArgument : "expr" "!button_ready_shoot && !is_player_shooting && !is_player_finishing_shoot && !is_player_using_item"
+if(!button_ready_shoot && !is_player_shooting && !is_player_finishing_shoot && !is_player_using_item)
 {
 	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1
