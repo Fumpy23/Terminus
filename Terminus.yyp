@@ -19,6 +19,7 @@
     {"id":{"name":"PlayerClimbSpr","path":"sprites/PlayerClimbSpr/PlayerClimbSpr.yy",},"order":3,},
     {"id":{"name":"PlayerClimbEndSpr","path":"sprites/PlayerClimbEndSpr/PlayerClimbEndSpr.yy",},"order":6,},
     {"id":{"name":"PlayerShootDRSpr","path":"sprites/PlayerShootDRSpr/PlayerShootDRSpr.yy",},"order":6,},
+    {"id":{"name":"PlayerTossSound","path":"sounds/PlayerTossSound/PlayerTossSound.yy",},"order":0,},
     {"id":{"name":"BarrierObj","path":"objects/BarrierObj/BarrierObj.yy",},"order":0,},
     {"id":{"name":"PushableBarricadeObj","path":"objects/PushableBarricadeObj/PushableBarricadeObj.yy",},"order":3,},
     {"id":{"name":"WallObj","path":"objects/WallObj/WallObj.yy",},"order":0,},
@@ -138,6 +139,7 @@
     {"folderPath":"folders/Sounds/Player/Guns_Bullets.yy","order":4,"resourceVersion":"1.0","name":"Guns_Bullets","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Player/Items_Animations.yy","order":13,"resourceVersion":"1.0","name":"Items_Animations","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Player/Items.yy","order":5,"resourceVersion":"1.0","name":"Items","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sounds/Player/Items.yy","order":5,"resourceVersion":"1.0","name":"Items","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

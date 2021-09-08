@@ -33,6 +33,22 @@ if(place_meeting(x + hspeed, y, WallObj))
 /// @DnDArgument : "expr" "place_meeting(x, y + vspeed, FloorObj) || place_meeting(x, y + vspeed, FloorDropObj)"
 if(place_meeting(x, y + vspeed, FloorObj) || place_meeting(x, y + vspeed, FloorDropObj))
 {
+	/// @DnDAction : YoYo Games.Common.If_Expression
+	/// @DnDVersion : 1
+	/// @DnDHash : 63CD1BCD
+	/// @DnDParent : 799A8444
+	/// @DnDArgument : "expr" "!is_y_stopped"
+	if(!is_y_stopped)
+	{
+		/// @DnDAction : YoYo Games.Audio.Play_Audio
+		/// @DnDVersion : 1
+		/// @DnDHash : 4C9F88A7
+		/// @DnDParent : 63CD1BCD
+		/// @DnDArgument : "soundid" "PlayerClimbingSound"
+		/// @DnDSaveInfo : "soundid" "PlayerClimbingSound"
+		audio_play_sound(PlayerClimbingSound, 0, 0);
+	}
+
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 48265DF4
@@ -74,6 +90,21 @@ if(!is_x_stopped && hspeed_reduce_delay == 0)
 		/// @DnDArgument : "var" "hspeed"
 		hspeed = hspeed - sign(hspeed);
 	}
+
+	/// @DnDAction : YoYo Games.Common.Else
+	/// @DnDVersion : 1
+	/// @DnDHash : 0163199F
+	/// @DnDParent : 10A9FDAB
+	else
+	{
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 36ACEADC
+		/// @DnDParent : 0163199F
+		/// @DnDArgument : "expr" "1"
+		/// @DnDArgument : "var" "is_x_stopped"
+		is_x_stopped = 1;
+	}
 }
 
 /// @DnDAction : YoYo Games.Common.If_Expression
@@ -105,4 +136,21 @@ if(!is_y_stopped && vspeed_reduce_delay == 0)
 		/// @DnDArgument : "var" "vspeed"
 		vspeed = vspeed + 1;
 	}
+}
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 7D248F59
+/// @DnDArgument : "expr" "is_x_stopped && is_y_stopped"
+if(is_x_stopped && is_y_stopped)
+{
+	/// @DnDAction : YoYo Games.Instances.Set_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 0064B2A0
+	/// @DnDParent : 7D248F59
+	/// @DnDArgument : "imageind_relative" "1"
+	/// @DnDArgument : "spriteind" "MeatItemStinkySpr"
+	/// @DnDSaveInfo : "spriteind" "MeatItemStinkySpr"
+	sprite_index = MeatItemStinkySpr;
+	image_index += 0;
 }

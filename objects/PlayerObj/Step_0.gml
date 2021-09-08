@@ -1573,9 +1573,17 @@ else
 									/// @DnDVersion : 1
 									/// @DnDHash : 432D0157
 									/// @DnDParent : 71692FFB
-									/// @DnDArgument : "expr" "image_index == 2"
-									if(image_index == 2)
+									/// @DnDArgument : "expr" "sprite_index == PlayerMeatThrowSpr && image_index == 2"
+									if(sprite_index == PlayerMeatThrowSpr && image_index == 2)
 									{
+										/// @DnDAction : YoYo Games.Audio.Play_Audio
+										/// @DnDVersion : 1
+										/// @DnDHash : 672EFBC0
+										/// @DnDParent : 432D0157
+										/// @DnDArgument : "soundid" "PlayerTossSound"
+										/// @DnDSaveInfo : "soundid" "PlayerTossSound"
+										audio_play_sound(PlayerTossSound, 0, 0);
+									
 										/// @DnDAction : YoYo Games.Instances.Create_Instance
 										/// @DnDVersion : 1
 										/// @DnDHash : 3074AEDE

@@ -1,6 +1,6 @@
 {
   "compression": 0,
-  "volume": 0.15,
+  "volume": 0.1,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "PlayerPistolLowerSound.wav",
-  "duration": 0.351474,
+  "soundFile": "PlayerTossSound.wav",
+  "duration": 0.226757,
   "parent": {
-    "name": "Guns_Bullets",
-    "path": "folders/Sounds/Player/Guns_Bullets.yy",
+    "name": "Items",
+    "path": "folders/Sounds/Player/Items.yy",
   },
   "resourceVersion": "1.0",
-  "name": "PlayerPistolLowerSound",
+  "name": "PlayerTossSound",
   "tags": [],
   "resourceType": "GMSound",
 }
