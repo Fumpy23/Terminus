@@ -51,6 +51,7 @@
     {"id":{"name":"MeatItemSpr","path":"sprites/MeatItemSpr/MeatItemSpr.yy",},"order":1,},
     {"id":{"name":"LadderBlueMSpr","path":"sprites/LadderBlueMSpr/LadderBlueMSpr.yy",},"order":2,},
     {"id":{"name":"InvisibleWallObj","path":"objects/InvisibleWallObj/InvisibleWallObj.yy",},"order":2,},
+    {"id":{"name":"PlayerHatchetReadySpr","path":"sprites/PlayerHatchetReadySpr/PlayerHatchetReadySpr.yy",},"order":0,},
     {"id":{"name":"PlayerPistolReload1Sound","path":"sounds/PlayerPistolReload1Sound/PlayerPistolReload1Sound.yy",},"order":0,},
     {"id":{"name":"LadderSObj","path":"objects/LadderSObj/LadderSObj.yy",},"order":1,},
     {"id":{"name":"PlayerShootDSpr","path":"sprites/PlayerShootDSpr/PlayerShootDSpr.yy",},"order":7,},
@@ -140,6 +141,7 @@
     {"folderPath":"folders/Sprites/Player/Items_Animations.yy","order":13,"resourceVersion":"1.0","name":"Items_Animations","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Player/Items.yy","order":5,"resourceVersion":"1.0","name":"Items","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sounds/Player/Items.yy","order":5,"resourceVersion":"1.0","name":"Items","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Player/PlayerHatchet.yy","order":14,"resourceVersion":"1.0","name":"PlayerHatchet","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
