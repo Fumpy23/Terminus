@@ -9,6 +9,7 @@
     {"id":{"name":"PlayerObj","path":"objects/PlayerObj/PlayerObj.yy",},"order":1,},
     {"id":{"name":"LadderObj","path":"objects/LadderObj/LadderObj.yy",},"order":0,},
     {"id":{"name":"PistolCarryBackSpr","path":"sprites/PistolCarryBackSpr/PistolCarryBackSpr.yy",},"order":3,},
+    {"id":{"name":"PlayerHatchetSwingSpr","path":"sprites/PlayerHatchetSwingSpr/PlayerHatchetSwingSpr.yy",},"order":1,},
     {"id":{"name":"BlueWallObj","path":"objects/BlueWallObj/BlueWallObj.yy",},"order":1,},
     {"id":{"name":"ContextualButtonSpr","path":"sprites/ContextualButtonSpr/ContextualButtonSpr.yy",},"order":4,},
     {"id":{"name":"PlayerMeatThrowSpr","path":"sprites/PlayerMeatThrowSpr/PlayerMeatThrowSpr.yy",},"order":0,},
