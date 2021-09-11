@@ -1,8 +1,8 @@
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 34699669
-/// @DnDArgument : "expr" "PlayerObj.is_gun_being_lowered && PlayerObj.can_player_ready_shoot"
-if(PlayerObj.is_gun_being_lowered && PlayerObj.can_player_ready_shoot)
+/// @DnDArgument : "expr" "PlayerObj.is_weapon_being_lowered && PlayerObj.can_player_ready_attack"
+if(PlayerObj.is_weapon_being_lowered && PlayerObj.can_player_ready_attack)
 {
 	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1

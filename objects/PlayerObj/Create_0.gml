@@ -18,9 +18,10 @@
 /// @DnDArgument : "expr_28" "1"
 /// @DnDArgument : "expr_29" "1"
 /// @DnDArgument : "expr_32" "1"
-/// @DnDArgument : "expr_41" "1"
-/// @DnDArgument : "expr_42" "noone"
-/// @DnDArgument : "expr_43" "MeatItemObj"
+/// @DnDArgument : "expr_40" "1"
+/// @DnDArgument : "expr_41" "noone"
+/// @DnDArgument : "expr_42" "MeatItemObj"
+/// @DnDArgument : "expr_45" ""Hatchet""
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
 /// @DnDArgument : "var_2" "run_speed"
@@ -49,23 +50,24 @@
 /// @DnDArgument : "var_25" "walking_sound_delay"
 /// @DnDArgument : "var_26" "climbing_sound_delay_max"
 /// @DnDArgument : "var_27" "climbing_sound_delay"
-/// @DnDArgument : "var_28" "can_player_ready_shoot"
-/// @DnDArgument : "var_29" "can_player_shoot"
-/// @DnDArgument : "var_30" "button_ready_shoot"
-/// @DnDArgument : "var_31" "button_shoot"
-/// @DnDArgument : "var_32" "is_player_readying_shoot"
-/// @DnDArgument : "var_33" "is_player_finishing_shoot"
-/// @DnDArgument : "var_34" "is_gun_being_raised"
-/// @DnDArgument : "var_35" "is_gun_being_lowered"
-/// @DnDArgument : "var_36" "is_player_shooting"
+/// @DnDArgument : "var_28" "can_player_ready_attack"
+/// @DnDArgument : "var_29" "can_player_attack"
+/// @DnDArgument : "var_30" "button_ready_attack"
+/// @DnDArgument : "var_31" "button_attack"
+/// @DnDArgument : "var_32" "is_player_readying_attack"
+/// @DnDArgument : "var_33" "is_player_finishing_attack"
+/// @DnDArgument : "var_34" "is_weapon_being_raised"
+/// @DnDArgument : "var_35" "is_weapon_being_lowered"
+/// @DnDArgument : "var_36" "is_player_attacking"
 /// @DnDArgument : "var_37" "is_reticle_attached"
-/// @DnDArgument : "var_39" "button_reload"
-/// @DnDArgument : "var_40" "is_player_reloading"
-/// @DnDArgument : "var_41" "can_player_reload"
-/// @DnDArgument : "var_42" "player_pistol_inst"
-/// @DnDArgument : "var_43" "player_item_inst"
-/// @DnDArgument : "var_44" "is_player_using_item"
-/// @DnDArgument : "var_45" "has_player_started_item"
+/// @DnDArgument : "var_38" "button_reload"
+/// @DnDArgument : "var_39" "is_player_reloading"
+/// @DnDArgument : "var_40" "can_player_reload"
+/// @DnDArgument : "var_41" "player_weapon_inst"
+/// @DnDArgument : "var_42" "player_item_inst"
+/// @DnDArgument : "var_43" "is_player_using_item"
+/// @DnDArgument : "var_44" "has_player_started_item"
+/// @DnDArgument : "var_45" "player_weapon_using"
 button_left = 0;
 button_right = 0;
 run_speed = 2;
@@ -94,24 +96,24 @@ walking_sound_delay_max = 15;
 walking_sound_delay = 0;
 climbing_sound_delay_max = 15;
 climbing_sound_delay = 0;
-can_player_ready_shoot = 1;
-can_player_shoot = 1;
-button_ready_shoot = 0;
-button_shoot = 0;
-is_player_readying_shoot = 1;
-is_player_finishing_shoot = 0;
-is_gun_being_raised = 0;
-is_gun_being_lowered = 0;
-is_player_shooting = 0;
+can_player_ready_attack = 1;
+can_player_attack = 1;
+button_ready_attack = 0;
+button_attack = 0;
+is_player_readying_attack = 1;
+is_player_finishing_attack = 0;
+is_weapon_being_raised = 0;
+is_weapon_being_lowered = 0;
+is_player_attacking = 0;
 is_reticle_attached = 0;
-variable = 0;
 button_reload = 0;
 is_player_reloading = 0;
 can_player_reload = 1;
-player_pistol_inst = noone;
+player_weapon_inst = noone;
 player_item_inst = MeatItemObj;
 is_player_using_item = 0;
 has_player_started_item = 0;
+player_weapon_using = "Hatchet";
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
