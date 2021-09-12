@@ -603,6 +603,22 @@ else
 			
 				/// @DnDAction : YoYo Games.Common.If_Expression
 				/// @DnDVersion : 1
+				/// @DnDHash : 02FDD84F
+				/// @DnDParent : 4F326A45
+				/// @DnDArgument : "expr" "player_weapon_using == "Hatchet" && image_index >= image_number - 4"
+				if(player_weapon_using == "Hatchet" && image_index >= image_number - 4)
+				{
+					/// @DnDAction : YoYo Games.Audio.Play_Audio
+					/// @DnDVersion : 1
+					/// @DnDHash : 0B690107
+					/// @DnDParent : 02FDD84F
+					/// @DnDArgument : "soundid" "PlayerHatchetSwingSound"
+					/// @DnDSaveInfo : "soundid" "PlayerHatchetSwingSound"
+					audio_play_sound(PlayerHatchetSwingSound, 0, 0);
+				}
+			
+				/// @DnDAction : YoYo Games.Common.If_Expression
+				/// @DnDVersion : 1
 				/// @DnDHash : 70152A65
 				/// @DnDParent : 4F326A45
 				/// @DnDArgument : "expr" "image_index >= image_number - 1"
@@ -797,45 +813,13 @@ else
 								/// @DnDVersion : 1
 								/// @DnDHash : 58CD8F51
 								/// @DnDParent : 7FB8F646
-								/// @DnDArgument : "expr" "is_player_attacking"
-								if(is_player_attacking)
-								{
-									/// @DnDAction : YoYo Games.Instances.Set_Sprite
-									/// @DnDVersion : 1
-									/// @DnDHash : 6C56C944
-									/// @DnDParent : 58CD8F51
-									/// @DnDArgument : "imageind_relative" "1"
-									/// @DnDArgument : "spriteind" "PlayerHatchetSwingSpr"
-									/// @DnDSaveInfo : "spriteind" "PlayerHatchetSwingSpr"
-									sprite_index = PlayerHatchetSwingSpr;
-									image_index += 0;
-								
-									/// @DnDAction : YoYo Games.Common.If_Expression
-									/// @DnDVersion : 1
-									/// @DnDHash : 479F8E7E
-									/// @DnDParent : 58CD8F51
-									/// @DnDArgument : "expr" "image_index >= image_number - 1"
-									if(image_index >= image_number - 1)
-									{
-										/// @DnDAction : YoYo Games.Common.Variable
-										/// @DnDVersion : 1
-										/// @DnDHash : 29B7334F
-										/// @DnDParent : 479F8E7E
-										/// @DnDArgument : "var" "is_player_attacking"
-										is_player_attacking = 0;
-									}
-								}
-							
-								/// @DnDAction : YoYo Games.Common.Else
-								/// @DnDVersion : 1
-								/// @DnDHash : 40E074F7
-								/// @DnDParent : 7FB8F646
-								else
+								/// @DnDArgument : "expr" "!is_player_attacking"
+								if(!is_player_attacking)
 								{
 									/// @DnDAction : YoYo Games.Instances.Set_Sprite
 									/// @DnDVersion : 1
 									/// @DnDHash : 4FD62251
-									/// @DnDParent : 40E074F7
+									/// @DnDParent : 58CD8F51
 									/// @DnDArgument : "spriteind" "PlayerHatchetSwingSpr"
 									/// @DnDSaveInfo : "spriteind" "PlayerHatchetSwingSpr"
 									sprite_index = PlayerHatchetSwingSpr;
@@ -844,7 +828,7 @@ else
 									/// @DnDAction : YoYo Games.Common.If_Expression
 									/// @DnDVersion : 1
 									/// @DnDHash : 0FECA306
-									/// @DnDParent : 40E074F7
+									/// @DnDParent : 58CD8F51
 									/// @DnDArgument : "expr" "can_player_attack && button_contextual"
 									if(can_player_attack && button_contextual)
 									{
@@ -868,6 +852,14 @@ else
 										/// @DnDArgument : "layer" ""Front""
 										/// @DnDSaveInfo : "objectid" "HatchetColObj"
 										hatchet_col_inst = instance_create_layer(x + image_xscale * 15, y + 0, "Front", HatchetColObj);
+									
+										/// @DnDAction : YoYo Games.Audio.Play_Audio
+										/// @DnDVersion : 1
+										/// @DnDHash : 5BCA98CA
+										/// @DnDParent : 0FECA306
+										/// @DnDArgument : "soundid" "PlayerPistolLowerSound"
+										/// @DnDSaveInfo : "soundid" "PlayerPistolLowerSound"
+										audio_play_sound(PlayerPistolLowerSound, 0, 0);
 									}
 								}
 							}

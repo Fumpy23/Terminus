@@ -153,8 +153,8 @@ player_reticle_inst = instance_create_layer(x + 0, y + 0, "Middlin", PlayerShoot
 /// @DnDHash : 66C84916
 /// @DnDArgument : "xpos_relative" "1"
 /// @DnDArgument : "ypos_relative" "1"
-/// @DnDArgument : "var" "player_pistol_inst"
-/// @DnDArgument : "objectid" "PistolCarryObj"
+/// @DnDArgument : "var" "player_weapon_inst"
+/// @DnDArgument : "objectid" "WeaponCarryObj"
 /// @DnDArgument : "layer" ""Front""
-/// @DnDSaveInfo : "objectid" "PistolCarryObj"
-player_pistol_inst = instance_create_layer(x + 0, y + 0, "Front", PistolCarryObj);
+/// @DnDSaveInfo : "objectid" "WeaponCarryObj"
+player_weapon_inst = instance_create_layer(x + 0, y + 0, "Front", WeaponCarryObj);

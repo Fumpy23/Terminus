@@ -30,7 +30,7 @@
     "path": "folders/Objects/Player/Guns_Bullets.yy",
   },
   "resourceVersion": "1.0",
-  "name": "PistolCarryObj",
+  "name": "WeaponCarryObj",
   "tags": [],
   "resourceType": "GMObject",
 }
