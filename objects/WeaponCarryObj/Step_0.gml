@@ -8,8 +8,8 @@ if(PlayerObj.player_weapon_using == "Pistol")
 	/// @DnDVersion : 1
 	/// @DnDHash : 172E765F
 	/// @DnDParent : 22E0A48E
-	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerBlinkSpr || PlayerObj.sprite_index == PlayerClimbEndSpr || PlayerObj.sprite_index == PlayerClimbSpr || PlayerObj.sprite_index == PlayerClimbStartSpr || PlayerObj.sprite_index == PlayerFallingSpr || PlayerObj.sprite_index == PlayerRunSpr || PlayerObj.sprite_index == PlayerStandSpr || PlayerObj.sprite_index == PlayerPushSpr || PlayerObj.sprite_index == PlayerMeatThrowSpr"
-	if(PlayerObj.sprite_index == PlayerBlinkSpr || PlayerObj.sprite_index == PlayerClimbEndSpr || PlayerObj.sprite_index == PlayerClimbSpr || PlayerObj.sprite_index == PlayerClimbStartSpr || PlayerObj.sprite_index == PlayerFallingSpr || PlayerObj.sprite_index == PlayerRunSpr || PlayerObj.sprite_index == PlayerStandSpr || PlayerObj.sprite_index == PlayerPushSpr || PlayerObj.sprite_index == PlayerMeatThrowSpr)
+	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerBlinkSpr || PlayerObj.sprite_index == PlayerClimbEndSpr || PlayerObj.sprite_index == PlayerClimbSpr || PlayerObj.sprite_index == PlayerClimbStartSpr || PlayerObj.sprite_index == PlayerFallingSpr || PlayerObj.sprite_index == PlayerRunSpr || PlayerObj.sprite_index == PlayerStandSpr || PlayerObj.sprite_index == PlayerPushSpr || PlayerObj.sprite_index == PlayerThrowSpr"
+	if(PlayerObj.sprite_index == PlayerBlinkSpr || PlayerObj.sprite_index == PlayerClimbEndSpr || PlayerObj.sprite_index == PlayerClimbSpr || PlayerObj.sprite_index == PlayerClimbStartSpr || PlayerObj.sprite_index == PlayerFallingSpr || PlayerObj.sprite_index == PlayerRunSpr || PlayerObj.sprite_index == PlayerStandSpr || PlayerObj.sprite_index == PlayerPushSpr || PlayerObj.sprite_index == PlayerThrowSpr)
 	{
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1
@@ -120,8 +120,8 @@ if(PlayerObj.player_weapon_using == "Hatchet")
 	/// @DnDVersion : 1
 	/// @DnDHash : 3911968B
 	/// @DnDParent : 457C0837
-	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerBlinkSpr || PlayerObj.sprite_index == PlayerClimbEndSpr || PlayerObj.sprite_index == PlayerClimbSpr || PlayerObj.sprite_index == PlayerClimbStartSpr || PlayerObj.sprite_index == PlayerFallingSpr || PlayerObj.sprite_index == PlayerRunSpr || PlayerObj.sprite_index == PlayerStandSpr || PlayerObj.sprite_index == PlayerPushSpr || PlayerObj.sprite_index == PlayerMeatThrowSpr || (PlayerObj.sprite_index == PlayerHatchetDoneSpr && PlayerObj.image_index > 7)"
-	if(PlayerObj.sprite_index == PlayerBlinkSpr || PlayerObj.sprite_index == PlayerClimbEndSpr || PlayerObj.sprite_index == PlayerClimbSpr || PlayerObj.sprite_index == PlayerClimbStartSpr || PlayerObj.sprite_index == PlayerFallingSpr || PlayerObj.sprite_index == PlayerRunSpr || PlayerObj.sprite_index == PlayerStandSpr || PlayerObj.sprite_index == PlayerPushSpr || PlayerObj.sprite_index == PlayerMeatThrowSpr || (PlayerObj.sprite_index == PlayerHatchetDoneSpr && PlayerObj.image_index > 7))
+	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerBlinkSpr || PlayerObj.sprite_index == PlayerClimbEndSpr || PlayerObj.sprite_index == PlayerClimbSpr || PlayerObj.sprite_index == PlayerClimbStartSpr || PlayerObj.sprite_index == PlayerFallingSpr || PlayerObj.sprite_index == PlayerRunSpr || PlayerObj.sprite_index == PlayerStandSpr || PlayerObj.sprite_index == PlayerPushSpr || PlayerObj.sprite_index == PlayerThrowSpr || (PlayerObj.sprite_index == PlayerHatchetDoneSpr && PlayerObj.image_index > 7)"
+	if(PlayerObj.sprite_index == PlayerBlinkSpr || PlayerObj.sprite_index == PlayerClimbEndSpr || PlayerObj.sprite_index == PlayerClimbSpr || PlayerObj.sprite_index == PlayerClimbStartSpr || PlayerObj.sprite_index == PlayerFallingSpr || PlayerObj.sprite_index == PlayerRunSpr || PlayerObj.sprite_index == PlayerStandSpr || PlayerObj.sprite_index == PlayerPushSpr || PlayerObj.sprite_index == PlayerThrowSpr || (PlayerObj.sprite_index == PlayerHatchetDoneSpr && PlayerObj.image_index > 7))
 	{
 		/// @DnDAction : YoYo Games.Common.If_Expression
 		/// @DnDVersion : 1

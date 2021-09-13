@@ -19,13 +19,13 @@
 /// @DnDArgument : "expr_29" "1"
 /// @DnDArgument : "expr_32" "1"
 /// @DnDArgument : "expr_40" "1"
-/// @DnDArgument : "expr_41" "noone"
-/// @DnDArgument : "expr_42" "MeatItemObj"
-/// @DnDArgument : "expr_45" ""Hatchet""
-/// @DnDArgument : "expr_46" "5"
-/// @DnDArgument : "expr_47" "vspeed_reduce_delay_max"
-/// @DnDArgument : "expr_48" "8"
-/// @DnDArgument : "expr_49" "hspeed_reduce_delay_max"
+/// @DnDArgument : "expr_41" "MeatItemObj"
+/// @DnDArgument : "expr_44" ""Hatchet""
+/// @DnDArgument : "expr_45" "5"
+/// @DnDArgument : "expr_46" "vspeed_reduce_delay_max"
+/// @DnDArgument : "expr_47" "8"
+/// @DnDArgument : "expr_48" "hspeed_reduce_delay_max"
+/// @DnDArgument : "expr_49" ""FlashGrenade""
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
 /// @DnDArgument : "var_2" "run_speed"
@@ -67,15 +67,15 @@
 /// @DnDArgument : "var_38" "button_reload"
 /// @DnDArgument : "var_39" "is_player_reloading"
 /// @DnDArgument : "var_40" "can_player_reload"
-/// @DnDArgument : "var_41" "player_weapon_inst"
-/// @DnDArgument : "var_42" "player_item_inst"
-/// @DnDArgument : "var_43" "is_player_using_item"
-/// @DnDArgument : "var_44" "has_player_started_item"
-/// @DnDArgument : "var_45" "player_weapon_using"
-/// @DnDArgument : "var_46" "vspeed_reduce_delay_max"
-/// @DnDArgument : "var_47" "vspeed_reduce_delay"
-/// @DnDArgument : "var_48" "hspeed_reduce_delay_max"
-/// @DnDArgument : "var_49" "hspeed_reduce_delay"
+/// @DnDArgument : "var_41" "player_item_inst"
+/// @DnDArgument : "var_42" "is_player_using_item"
+/// @DnDArgument : "var_43" "has_player_started_item"
+/// @DnDArgument : "var_44" "player_weapon_using"
+/// @DnDArgument : "var_45" "vspeed_reduce_delay_max"
+/// @DnDArgument : "var_46" "vspeed_reduce_delay"
+/// @DnDArgument : "var_47" "hspeed_reduce_delay_max"
+/// @DnDArgument : "var_48" "hspeed_reduce_delay"
+/// @DnDArgument : "var_49" "player_item_using"
 button_left = 0;
 button_right = 0;
 run_speed = 1;
@@ -117,7 +117,6 @@ is_reticle_attached = 0;
 button_reload = 0;
 is_player_reloading = 0;
 can_player_reload = 1;
-player_weapon_inst = noone;
 player_item_inst = MeatItemObj;
 is_player_using_item = 0;
 has_player_started_item = 0;
@@ -126,6 +125,7 @@ vspeed_reduce_delay_max = 5;
 vspeed_reduce_delay = vspeed_reduce_delay_max;
 hspeed_reduce_delay_max = 8;
 hspeed_reduce_delay = hspeed_reduce_delay_max;
+player_item_using = "FlashGrenade";
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
