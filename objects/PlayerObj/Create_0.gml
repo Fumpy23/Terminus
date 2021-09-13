@@ -1,14 +1,14 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7C7918CC
-/// @DnDInput : 46
-/// @DnDArgument : "expr_2" "2"
+/// @DnDInput : 50
+/// @DnDArgument : "expr_2" "1"
 /// @DnDArgument : "expr_3" "300"
 /// @DnDArgument : "expr_4" "blink_time_max"
 /// @DnDArgument : "expr_6" "-1"
 /// @DnDArgument : "expr_9" "noone"
 /// @DnDArgument : "expr_10" "noone"
-/// @DnDArgument : "expr_13" "3"
+/// @DnDArgument : "expr_13" "1"
 /// @DnDArgument : "expr_14" "noone"
 /// @DnDArgument : "expr_17" "noone"
 /// @DnDArgument : "expr_19" "1"
@@ -22,6 +22,10 @@
 /// @DnDArgument : "expr_41" "noone"
 /// @DnDArgument : "expr_42" "MeatItemObj"
 /// @DnDArgument : "expr_45" ""Hatchet""
+/// @DnDArgument : "expr_46" "5"
+/// @DnDArgument : "expr_47" "vspeed_reduce_delay_max"
+/// @DnDArgument : "expr_48" "8"
+/// @DnDArgument : "expr_49" "hspeed_reduce_delay_max"
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
 /// @DnDArgument : "var_2" "run_speed"
@@ -68,9 +72,13 @@
 /// @DnDArgument : "var_43" "is_player_using_item"
 /// @DnDArgument : "var_44" "has_player_started_item"
 /// @DnDArgument : "var_45" "player_weapon_using"
+/// @DnDArgument : "var_46" "vspeed_reduce_delay_max"
+/// @DnDArgument : "var_47" "vspeed_reduce_delay"
+/// @DnDArgument : "var_48" "hspeed_reduce_delay_max"
+/// @DnDArgument : "var_49" "hspeed_reduce_delay"
 button_left = 0;
 button_right = 0;
-run_speed = 2;
+run_speed = 1;
 blink_time_max = 300;
 blink_time = blink_time_max;
 is_player_climbing = 0;
@@ -81,7 +89,7 @@ contextual_inst = noone;
 climbable_inst = noone;
 button_down = 0;
 is_player_falling = 0;
-player_falling_speed = 3;
+player_falling_speed = 1;
 floor_inst = noone;
 can_player_move_left = 0;
 can_player_move_right = 0;
@@ -114,6 +122,10 @@ player_item_inst = MeatItemObj;
 is_player_using_item = 0;
 has_player_started_item = 0;
 player_weapon_using = "Hatchet";
+vspeed_reduce_delay_max = 5;
+vspeed_reduce_delay = vspeed_reduce_delay_max;
+hspeed_reduce_delay_max = 8;
+hspeed_reduce_delay = hspeed_reduce_delay_max;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
