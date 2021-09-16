@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7C7918CC
-/// @DnDInput : 50
+/// @DnDInput : 51
 /// @DnDArgument : "expr_2" "1"
 /// @DnDArgument : "expr_3" "300"
 /// @DnDArgument : "expr_4" "blink_time_max"
@@ -76,6 +76,7 @@
 /// @DnDArgument : "var_47" "hspeed_reduce_delay_max"
 /// @DnDArgument : "var_48" "hspeed_reduce_delay"
 /// @DnDArgument : "var_49" "player_item_using"
+/// @DnDArgument : "var_50" "is_player_blinded"
 button_left = 0;
 button_right = 0;
 run_speed = 1;
@@ -126,6 +127,7 @@ vspeed_reduce_delay = vspeed_reduce_delay_max;
 hspeed_reduce_delay_max = 8;
 hspeed_reduce_delay = hspeed_reduce_delay_max;
 player_item_using = "FlashGrenade";
+is_player_blinded = 0;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1

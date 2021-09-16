@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 5BF533AB
-/// @DnDInput : 14
+/// @DnDInput : 19
 /// @DnDArgument : "expr" "8"
 /// @DnDArgument : "expr_1" "hspeed_reduce_delay_max"
 /// @DnDArgument : "expr_2" "5"
@@ -9,8 +9,11 @@
 /// @DnDArgument : "expr_7" "3"
 /// @DnDArgument : "expr_8" "visible_delay_max"
 /// @DnDArgument : "expr_10" "360"
-/// @DnDArgument : "expr_12" "180"
+/// @DnDArgument : "expr_12" "90"
 /// @DnDArgument : "expr_13" "room_height + sprite_height + 1"
+/// @DnDArgument : "expr_14" "1"
+/// @DnDArgument : "expr_15" "25"
+/// @DnDArgument : "expr_17" "15"
 /// @DnDArgument : "var" "hspeed_reduce_delay_max"
 /// @DnDArgument : "var_1" "hspeed_reduce_delay"
 /// @DnDArgument : "var_2" "vspeed_reduce_delay_max"
@@ -25,6 +28,11 @@
 /// @DnDArgument : "var_11" "has_exploded"
 /// @DnDArgument : "var_12" "time_until_detonation"
 /// @DnDArgument : "var_13" "y_collision"
+/// @DnDArgument : "var_14" "old_image_index"
+/// @DnDArgument : "var_15" "sound_delay_max"
+/// @DnDArgument : "var_16" "sound_delay"
+/// @DnDArgument : "var_17" "lantern_sound_delay_max"
+/// @DnDArgument : "var_18" "lantern_sound_delay"
 hspeed_reduce_delay_max = 8;
 hspeed_reduce_delay = hspeed_reduce_delay_max;
 vspeed_reduce_delay_max = 5;
@@ -37,5 +45,10 @@ visible_delay = visible_delay_max;
 flash_started = 0;
 flash_duration = 360;
 has_exploded = 0;
-time_until_detonation = 180;
+time_until_detonation = 90;
 y_collision = room_height + sprite_height + 1;
+old_image_index = 1;
+sound_delay_max = 25;
+sound_delay = 0;
+lantern_sound_delay_max = 15;
+lantern_sound_delay = 0;

@@ -7,8 +7,8 @@ contextual_inst.visible = 0;
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 2DCC412F
-/// @DnDArgument : "expr" "!button_ready_attack && !is_player_attacking && !is_player_finishing_attack && !is_player_using_item"
-if(!button_ready_attack && !is_player_attacking && !is_player_finishing_attack && !is_player_using_item)
+/// @DnDArgument : "expr" "!button_ready_attack && !is_player_attacking && !is_player_finishing_attack && !is_player_using_item && !is_player_blinded"
+if(!button_ready_attack && !is_player_attacking && !is_player_finishing_attack && !is_player_using_item && !is_player_blinded)
 {
 	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1
