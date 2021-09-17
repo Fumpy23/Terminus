@@ -20,7 +20,7 @@
 /// @DnDArgument : "expr_32" "1"
 /// @DnDArgument : "expr_40" "1"
 /// @DnDArgument : "expr_41" "MeatItemObj"
-/// @DnDArgument : "expr_44" ""Hatchet""
+/// @DnDArgument : "expr_44" ""Pistol""
 /// @DnDArgument : "expr_45" "5"
 /// @DnDArgument : "expr_46" "vspeed_reduce_delay_max"
 /// @DnDArgument : "expr_47" "8"
@@ -121,7 +121,7 @@ can_player_reload = 1;
 player_item_inst = MeatItemObj;
 is_player_using_item = 0;
 has_player_started_item = 0;
-player_weapon_using = "Hatchet";
+player_weapon_using = "Pistol";
 vspeed_reduce_delay_max = 5;
 vspeed_reduce_delay = vspeed_reduce_delay_max;
 hspeed_reduce_delay_max = 8;

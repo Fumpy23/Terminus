@@ -50,9 +50,9 @@ if(place_meeting(x, y + vspeed, FloorObj) || place_meeting(x, y + vspeed, FloorD
 	
 		/// @DnDAction : YoYo Games.Common.Execute_Code
 		/// @DnDVersion : 1
-		/// @DnDHash : 17976BF2
+		/// @DnDHash : 6F49FA79
 		/// @DnDParent : 63CD1BCD
-		/// @DnDArgument : "code" "var floor_inst = instance_place(x, y + vspeed, FloorObj);$(13_10)if (floor_inst != noone) {$(13_10)	y_collision = floor_inst.y - 1;$(13_10)}$(13_10)$(13_10)floor_inst = instance_place(x, y + vspeed, FloorDropObj);$(13_10)if (floor_inst != noone && floor_inst.y < y_collision) {$(13_10)	y_collision = floor_inst.y - 1;$(13_10)}"
+		/// @DnDArgument : "code" "var floor_inst = instance_place(x, y + vspeed, FloorObj);$(13_10)if (floor_inst != noone) {$(13_10)	y_collision = floor_inst.y - 1;$(13_10)}$(13_10)$(13_10)floor_inst = instance_place(x, y + vspeed, FloorDropObj);$(13_10)if (floor_inst != noone && floor_inst.y < y_collision) {$(13_10)	y_collision = floor_inst.y - 1;$(13_10)}$(13_10)$(13_10)y = y_collision;"
 		var floor_inst = instance_place(x, y + vspeed, FloorObj);
 		if (floor_inst != noone) {
 			y_collision = floor_inst.y - 1;
@@ -62,6 +62,8 @@ if(place_meeting(x, y + vspeed, FloorObj) || place_meeting(x, y + vspeed, FloorD
 		if (floor_inst != noone && floor_inst.y < y_collision) {
 			y_collision = floor_inst.y - 1;
 		}
+		
+		y = y_collision;
 	}
 
 	/// @DnDAction : YoYo Games.Common.Variable
@@ -151,29 +153,4 @@ if(!is_y_stopped && vspeed_reduce_delay == 0)
 		/// @DnDArgument : "var" "vspeed"
 		vspeed = vspeed + 1;
 	}
-}
-
-/// @DnDAction : YoYo Games.Common.If_Expression
-/// @DnDVersion : 1
-/// @DnDHash : 7D248F59
-/// @DnDArgument : "expr" "is_x_stopped && is_y_stopped"
-if(is_x_stopped && is_y_stopped)
-{
-	/// @DnDAction : YoYo Games.Instances.Set_Sprite
-	/// @DnDVersion : 1
-	/// @DnDHash : 0064B2A0
-	/// @DnDParent : 7D248F59
-	/// @DnDArgument : "imageind_relative" "1"
-	/// @DnDArgument : "spriteind" "MeatItemStinkySpr"
-	/// @DnDSaveInfo : "spriteind" "MeatItemStinkySpr"
-	sprite_index = MeatItemStinkySpr;
-	image_index += 0;
-
-	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 3A1CEED5
-	/// @DnDParent : 7D248F59
-	/// @DnDArgument : "expr" "y_collision"
-	/// @DnDArgument : "var" "y"
-	y = y_collision;
 }

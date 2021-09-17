@@ -33,8 +33,8 @@ if(place_meeting(x + hspeed, y, WallObj))
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
 /// @DnDHash : 13B3923B
-/// @DnDArgument : "expr" "place_meeting(x, y, FloorObj) || place_meeting(x, y, FloorDropObj)"
-if(place_meeting(x, y, FloorObj) || place_meeting(x, y, FloorDropObj))
+/// @DnDArgument : "expr" "place_meeting(x, y + vspeed, FloorObj) || place_meeting(x, y + vspeed, FloorDropObj)"
+if(place_meeting(x, y + vspeed, FloorObj) || place_meeting(x, y + vspeed, FloorDropObj))
 {
 	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1
@@ -56,13 +56,13 @@ if(place_meeting(x, y, FloorObj) || place_meeting(x, y, FloorDropObj))
 		/// @DnDVersion : 1
 		/// @DnDHash : 76BC612B
 		/// @DnDParent : 56862B0B
-		/// @DnDArgument : "code" "var floor_inst = instance_place(x, y, FloorObj);$(13_10)if (floor_inst != noone) {$(13_10)	y_collision = floor_inst.y - 1;$(13_10)}$(13_10)$(13_10)floor_inst = instance_place(x, y, FloorDropObj);$(13_10)if (floor_inst != noone && floor_inst.y < y_collision) {$(13_10)	y_collision = floor_inst.y - 1;$(13_10)}"
-		var floor_inst = instance_place(x, y, FloorObj);
+		/// @DnDArgument : "code" "var floor_inst = instance_place(x, y + vspeed, FloorObj);$(13_10)if (floor_inst != noone) {$(13_10)	y_collision = floor_inst.y - 1;$(13_10)}$(13_10)$(13_10)floor_inst = instance_place(x, y + vspeed, FloorDropObj);$(13_10)if (floor_inst != noone && floor_inst.y < y_collision) {$(13_10)	y_collision = floor_inst.y - 1;$(13_10)}"
+		var floor_inst = instance_place(x, y + vspeed, FloorObj);
 		if (floor_inst != noone) {
 			y_collision = floor_inst.y - 1;
 		}
 		
-		floor_inst = instance_place(x, y, FloorDropObj);
+		floor_inst = instance_place(x, y + vspeed, FloorDropObj);
 		if (floor_inst != noone && floor_inst.y < y_collision) {
 			y_collision = floor_inst.y - 1;
 		}
