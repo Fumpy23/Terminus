@@ -74,7 +74,7 @@ can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallOb
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 308067B2
-/// @DnDInput : 16
+/// @DnDInput : 17
 /// @DnDArgument : "expr" "keyboard_check(ord("A"))"
 /// @DnDArgument : "expr_1" "keyboard_check(ord("D"))"
 /// @DnDArgument : "expr_2" "(((button_right * can_player_move_right) - (button_left * can_player_move_left)) * run_speed * !is_player_climbing * !is_player_falling * !is_player_pushing) + (is_player_pushing * player_pushing_speed)"
@@ -89,7 +89,8 @@ can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallOb
 /// @DnDArgument : "expr_12" "keyboard_check(ord("I"))"
 /// @DnDArgument : "expr_13" "keyboard_check_pressed(ord("O"))"
 /// @DnDArgument : "expr_14" "keyboard_check_pressed(ord("U")) && !is_player_using_item"
-/// @DnDArgument : "expr_15" "!can_player_ready_attack && !(place_meeting(x + 12, y, WallObj) || place_meeting(x - 12, y, WallObj))"
+/// @DnDArgument : "expr_15" "!place_meeting(x + (image_xscale * 5), y, WallObj)"
+/// @DnDArgument : "expr_16" "player_weapon_using != "None""
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
 /// @DnDArgument : "var_2" "hspeed"
@@ -105,7 +106,8 @@ can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallOb
 /// @DnDArgument : "var_12" "button_ready_attack"
 /// @DnDArgument : "var_13" "button_reload"
 /// @DnDArgument : "var_14" "has_player_started_item"
-/// @DnDArgument : "var_15" "can_player_ready_attack"
+/// @DnDArgument : "var_15" "can_player_attack"
+/// @DnDArgument : "var_16" "is_player_using_weapon"
 button_left = keyboard_check(ord("A"));
 button_right = keyboard_check(ord("D"));
 hspeed = (((button_right * can_player_move_right) - (button_left * can_player_move_left)) * run_speed * !is_player_climbing * !is_player_falling * !is_player_pushing) + (is_player_pushing * player_pushing_speed);
@@ -121,7 +123,8 @@ climbing_sound_delay = climbing_sound_delay - 1;
 button_ready_attack = keyboard_check(ord("I"));
 button_reload = keyboard_check_pressed(ord("O"));
 has_player_started_item = keyboard_check_pressed(ord("U")) && !is_player_using_item;
-can_player_ready_attack = !can_player_ready_attack && !(place_meeting(x + 12, y, WallObj) || place_meeting(x - 12, y, WallObj));
+can_player_attack = !place_meeting(x + (image_xscale * 5), y, WallObj);
+is_player_using_weapon = player_weapon_using != "None";
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
@@ -778,8 +781,8 @@ else
 					/// @DnDVersion : 1
 					/// @DnDHash : 2EA9182A
 					/// @DnDParent : 2DAEB3C7
-					/// @DnDArgument : "expr" "(button_ready_attack || is_weapon_being_raised) && can_player_ready_attack"
-					if((button_ready_attack || is_weapon_being_raised) && can_player_ready_attack)
+					/// @DnDArgument : "expr" "(button_ready_attack || is_weapon_being_raised) && can_player_ready_attack && is_player_using_weapon"
+					if((button_ready_attack || is_weapon_being_raised) && can_player_ready_attack && is_player_using_weapon)
 					{
 						/// @DnDAction : YoYo Games.Common.If_Expression
 						/// @DnDVersion : 1
@@ -1514,8 +1517,8 @@ else
 						/// @DnDVersion : 1
 						/// @DnDHash : 77F2CC8B
 						/// @DnDParent : 5FE3964C
-						/// @DnDArgument : "expr" "(is_player_finishing_attack || is_weapon_being_lowered) && can_player_ready_attack"
-						if((is_player_finishing_attack || is_weapon_being_lowered) && can_player_ready_attack)
+						/// @DnDArgument : "expr" "(is_player_finishing_attack || is_weapon_being_lowered) && is_player_using_weapon"
+						if((is_player_finishing_attack || is_weapon_being_lowered) && is_player_using_weapon)
 						{
 							/// @DnDAction : YoYo Games.Common.If_Expression
 							/// @DnDVersion : 1
