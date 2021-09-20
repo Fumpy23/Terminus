@@ -147,6 +147,21 @@ if(sprite_index != PlayerRunSpr)
 
 /// @DnDAction : YoYo Games.Common.If_Expression
 /// @DnDVersion : 1
+/// @DnDHash : 3D48C085
+/// @DnDArgument : "expr" "is_player_using_gas_mask"
+if(is_player_using_gas_mask)
+{
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 4DA94526
+	/// @DnDParent : 3D48C085
+	/// @DnDArgument : "expr" ""None""
+	/// @DnDArgument : "var" "player_weapon_using"
+	player_weapon_using = "None";
+}
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
 /// @DnDHash : 615AEE14
 /// @DnDArgument : "expr" "is_player_blinded"
 if(is_player_blinded)

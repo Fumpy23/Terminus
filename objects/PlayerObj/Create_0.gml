@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7C7918CC
-/// @DnDInput : 52
+/// @DnDInput : 53
 /// @DnDArgument : "expr_2" "1"
 /// @DnDArgument : "expr_3" "300"
 /// @DnDArgument : "expr_4" "blink_time_max"
@@ -20,12 +20,13 @@
 /// @DnDArgument : "expr_32" "1"
 /// @DnDArgument : "expr_40" "1"
 /// @DnDArgument : "expr_41" "MeatItemObj"
-/// @DnDArgument : "expr_44" ""Pistol""
+/// @DnDArgument : "expr_44" ""Hatchet""
 /// @DnDArgument : "expr_45" "5"
 /// @DnDArgument : "expr_46" "vspeed_reduce_delay_max"
 /// @DnDArgument : "expr_47" "8"
 /// @DnDArgument : "expr_48" "hspeed_reduce_delay_max"
 /// @DnDArgument : "expr_49" ""FlashGrenade""
+/// @DnDArgument : "expr_52" "1"
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
 /// @DnDArgument : "var_2" "run_speed"
@@ -78,6 +79,7 @@
 /// @DnDArgument : "var_49" "player_item_using"
 /// @DnDArgument : "var_50" "is_player_blinded"
 /// @DnDArgument : "var_51" "is_player_using_weapon"
+/// @DnDArgument : "var_52" "is_player_using_gas_mask"
 button_left = 0;
 button_right = 0;
 run_speed = 1;
@@ -122,7 +124,7 @@ can_player_reload = 1;
 player_item_inst = MeatItemObj;
 is_player_using_item = 0;
 has_player_started_item = 0;
-player_weapon_using = "Pistol";
+player_weapon_using = "Hatchet";
 vspeed_reduce_delay_max = 5;
 vspeed_reduce_delay = vspeed_reduce_delay_max;
 hspeed_reduce_delay_max = 8;
@@ -130,6 +132,7 @@ hspeed_reduce_delay = hspeed_reduce_delay_max;
 player_item_using = "FlashGrenade";
 is_player_blinded = 0;
 is_player_using_weapon = 0;
+is_player_using_gas_mask = 1;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
@@ -174,3 +177,14 @@ player_reticle_inst = instance_create_layer(x + 0, y + 0, "Middlin", PlayerShoot
 /// @DnDArgument : "layer" ""Front""
 /// @DnDSaveInfo : "objectid" "WeaponCarryObj"
 player_weapon_inst = instance_create_layer(x + 0, y + 0, "Front", WeaponCarryObj);
+
+/// @DnDAction : YoYo Games.Instances.Create_Instance
+/// @DnDVersion : 1
+/// @DnDHash : 60FA289B
+/// @DnDArgument : "xpos_relative" "1"
+/// @DnDArgument : "ypos_relative" "1"
+/// @DnDArgument : "var" "gas_mask_item_inst"
+/// @DnDArgument : "objectid" "GasMaskItemObj"
+/// @DnDArgument : "layer" ""Front""
+/// @DnDSaveInfo : "objectid" "GasMaskItemObj"
+gas_mask_item_inst = instance_create_layer(x + 0, y + 0, "Front", GasMaskItemObj);

@@ -104,9 +104,9 @@ if(PlayerObj.player_weapon_using == "Pistol")
 		/// @DnDHash : 7ED7D4DE
 		/// @DnDParent : 53C446FA
 		/// @DnDArgument : "x" "0"
-		/// @DnDArgument : "y" "0"
+		/// @DnDArgument : "y" "room_height + sprite_height"
 		x = 0;
-		y = 0;
+		y = room_height + sprite_height;
 	}
 }
 
@@ -151,8 +151,8 @@ if(PlayerObj.player_weapon_using == "Hatchet")
 			/// @DnDVersion : 1
 			/// @DnDHash : 03E047E5
 			/// @DnDParent : 31D0F545
-			/// @DnDArgument : "code" "layer_add_instance(layer_get_id("Front"), self);"
-			layer_add_instance(layer_get_id("Front"), self);
+			/// @DnDArgument : "code" "layer_add_instance(layer_get_id("Frontmost"), self);"
+			layer_add_instance(layer_get_id("Frontmost"), self);
 		
 			/// @DnDAction : YoYo Games.Movement.Jump_To_Point
 			/// @DnDVersion : 1
@@ -216,8 +216,24 @@ if(PlayerObj.player_weapon_using == "Hatchet")
 		/// @DnDHash : 52C334CF
 		/// @DnDParent : 1AB8F484
 		/// @DnDArgument : "x" "0"
-		/// @DnDArgument : "y" "0"
+		/// @DnDArgument : "y" "room_height + sprite_height"
 		x = 0;
-		y = 0;
+		y = room_height + sprite_height;
 	}
+}
+
+/// @DnDAction : YoYo Games.Common.If_Expression
+/// @DnDVersion : 1
+/// @DnDHash : 3BA83C8A
+/// @DnDArgument : "expr" "PlayerObj.player_weapon_using == "None""
+if(PlayerObj.player_weapon_using == "None")
+{
+	/// @DnDAction : YoYo Games.Movement.Jump_To_Point
+	/// @DnDVersion : 1
+	/// @DnDHash : 37AF8189
+	/// @DnDParent : 3BA83C8A
+	/// @DnDArgument : "x" "0"
+	/// @DnDArgument : "y" "room_height + sprite_height"
+	x = 0;
+	y = room_height + sprite_height;
 }
