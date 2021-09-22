@@ -20,13 +20,12 @@
 /// @DnDArgument : "expr_32" "1"
 /// @DnDArgument : "expr_40" "1"
 /// @DnDArgument : "expr_41" "MeatItemObj"
-/// @DnDArgument : "expr_44" ""Hatchet""
+/// @DnDArgument : "expr_44" ""Pistol""
 /// @DnDArgument : "expr_45" "5"
 /// @DnDArgument : "expr_46" "vspeed_reduce_delay_max"
 /// @DnDArgument : "expr_47" "8"
 /// @DnDArgument : "expr_48" "hspeed_reduce_delay_max"
 /// @DnDArgument : "expr_49" ""FlashGrenade""
-/// @DnDArgument : "expr_52" "1"
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
 /// @DnDArgument : "var_2" "run_speed"
@@ -124,7 +123,7 @@ can_player_reload = 1;
 player_item_inst = MeatItemObj;
 is_player_using_item = 0;
 has_player_started_item = 0;
-player_weapon_using = "Hatchet";
+player_weapon_using = "Pistol";
 vspeed_reduce_delay_max = 5;
 vspeed_reduce_delay = vspeed_reduce_delay_max;
 hspeed_reduce_delay_max = 8;
@@ -132,7 +131,7 @@ hspeed_reduce_delay = hspeed_reduce_delay_max;
 player_item_using = "FlashGrenade";
 is_player_blinded = 0;
 is_player_using_weapon = 0;
-is_player_using_gas_mask = 1;
+is_player_using_gas_mask = 0;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
@@ -181,10 +180,10 @@ player_weapon_inst = instance_create_layer(x + 0, y + 0, "Front", WeaponCarryObj
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
 /// @DnDHash : 60FA289B
+/// @DnDDisabled : 1
 /// @DnDArgument : "xpos_relative" "1"
 /// @DnDArgument : "ypos_relative" "1"
 /// @DnDArgument : "var" "gas_mask_item_inst"
 /// @DnDArgument : "objectid" "GasMaskItemObj"
 /// @DnDArgument : "layer" ""Front""
 /// @DnDSaveInfo : "objectid" "GasMaskItemObj"
-gas_mask_item_inst = instance_create_layer(x + 0, y + 0, "Front", GasMaskItemObj);
