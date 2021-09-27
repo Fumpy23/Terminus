@@ -8,8 +8,8 @@ if(PlayerObj.is_weapon_being_lowered && PlayerObj.can_player_ready_attack)
 	/// @DnDVersion : 1
 	/// @DnDHash : 4D6FBF02
 	/// @DnDParent : 34699669
-	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerShootUSpr"
-	if(PlayerObj.sprite_index == PlayerShootUSpr)
+	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerPistolShootUSpr"
+	if(PlayerObj.sprite_index == PlayerPistolShootUSpr)
 	{
 		/// @DnDAction : YoYo Games.Movement.Jump_To_Point
 		/// @DnDVersion : 1
@@ -39,8 +39,8 @@ if(PlayerObj.is_weapon_being_lowered && PlayerObj.can_player_ready_attack)
 	/// @DnDVersion : 1
 	/// @DnDHash : 4F8326C9
 	/// @DnDParent : 34699669
-	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerShootURSpr"
-	if(PlayerObj.sprite_index == PlayerShootURSpr)
+	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerPistolShootURSpr"
+	if(PlayerObj.sprite_index == PlayerPistolShootURSpr)
 	{
 		/// @DnDAction : YoYo Games.Movement.Jump_To_Point
 		/// @DnDVersion : 1
@@ -71,8 +71,8 @@ if(PlayerObj.is_weapon_being_lowered && PlayerObj.can_player_ready_attack)
 	/// @DnDVersion : 1
 	/// @DnDHash : 540B14C4
 	/// @DnDParent : 34699669
-	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerShootRSpr"
-	if(PlayerObj.sprite_index == PlayerShootRSpr)
+	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerPistolShootRSpr"
+	if(PlayerObj.sprite_index == PlayerPistolShootRSpr)
 	{
 		/// @DnDAction : YoYo Games.Movement.Jump_To_Point
 		/// @DnDVersion : 1
@@ -103,8 +103,8 @@ if(PlayerObj.is_weapon_being_lowered && PlayerObj.can_player_ready_attack)
 	/// @DnDVersion : 1
 	/// @DnDHash : 1D531C6F
 	/// @DnDParent : 34699669
-	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerShootDRSpr"
-	if(PlayerObj.sprite_index == PlayerShootDRSpr)
+	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerPistolShootDRSpr"
+	if(PlayerObj.sprite_index == PlayerPistolShootDRSpr)
 	{
 		/// @DnDAction : YoYo Games.Movement.Jump_To_Point
 		/// @DnDVersion : 1
@@ -135,8 +135,8 @@ if(PlayerObj.is_weapon_being_lowered && PlayerObj.can_player_ready_attack)
 	/// @DnDVersion : 1
 	/// @DnDHash : 2EF3253B
 	/// @DnDParent : 34699669
-	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerShootDSpr"
-	if(PlayerObj.sprite_index == PlayerShootDSpr)
+	/// @DnDArgument : "expr" "PlayerObj.sprite_index == PlayerPistolShootDSpr"
+	if(PlayerObj.sprite_index == PlayerPistolShootDSpr)
 	{
 		/// @DnDAction : YoYo Games.Movement.Jump_To_Point
 		/// @DnDVersion : 1

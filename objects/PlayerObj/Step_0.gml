@@ -852,9 +852,9 @@ else
 								/// @DnDHash : 7B54667A
 								/// @DnDParent : 192B3D22
 								/// @DnDArgument : "imageind_relative" "1"
-								/// @DnDArgument : "spriteind" "PlayerShootReadySpr"
-								/// @DnDSaveInfo : "spriteind" "PlayerShootReadySpr"
-								sprite_index = PlayerShootReadySpr;
+								/// @DnDArgument : "spriteind" "PlayerPistolShootReadySpr"
+								/// @DnDSaveInfo : "spriteind" "PlayerPistolShootReadySpr"
+								sprite_index = PlayerPistolShootReadySpr;
 								image_index += 0;
 							}
 						
@@ -938,9 +938,9 @@ else
 									/// @DnDVersion : 1
 									/// @DnDHash : 16D835AF
 									/// @DnDParent : 4AF04768
-									/// @DnDArgument : "spriteind" "PlayerReloadSpr"
-									/// @DnDSaveInfo : "spriteind" "PlayerReloadSpr"
-									sprite_index = PlayerReloadSpr;
+									/// @DnDArgument : "spriteind" "PlayerPistolReloadSpr"
+									/// @DnDSaveInfo : "spriteind" "PlayerPistolReloadSpr"
+									sprite_index = PlayerPistolReloadSpr;
 									image_index = 0;
 								}
 							}
@@ -1046,9 +1046,9 @@ else
 												/// @DnDVersion : 1
 												/// @DnDHash : 1917F8B7
 												/// @DnDParent : 5630F2BD
-												/// @DnDArgument : "spriteind" "PlayerShootURSpr"
-												/// @DnDSaveInfo : "spriteind" "PlayerShootURSpr"
-												sprite_index = PlayerShootURSpr;
+												/// @DnDArgument : "spriteind" "PlayerPistolShootURSpr"
+												/// @DnDSaveInfo : "spriteind" "PlayerPistolShootURSpr"
+												sprite_index = PlayerPistolShootURSpr;
 												image_index = 0;
 											
 												/// @DnDAction : YoYo Games.Common.If_Expression
@@ -1141,9 +1141,9 @@ else
 												/// @DnDVersion : 1
 												/// @DnDHash : 240CCC10
 												/// @DnDParent : 2E4D2E80
-												/// @DnDArgument : "spriteind" "PlayerShootUSpr"
-												/// @DnDSaveInfo : "spriteind" "PlayerShootUSpr"
-												sprite_index = PlayerShootUSpr;
+												/// @DnDArgument : "spriteind" "PlayerPistolShootUSpr"
+												/// @DnDSaveInfo : "spriteind" "PlayerPistolShootUSpr"
+												sprite_index = PlayerPistolShootUSpr;
 												image_index = 0;
 											
 												/// @DnDAction : YoYo Games.Common.If_Expression
@@ -1250,9 +1250,9 @@ else
 													/// @DnDVersion : 1
 													/// @DnDHash : 0DDBD18A
 													/// @DnDParent : 48CCC7D3
-													/// @DnDArgument : "spriteind" "PlayerShootDRSpr"
-													/// @DnDSaveInfo : "spriteind" "PlayerShootDRSpr"
-													sprite_index = PlayerShootDRSpr;
+													/// @DnDArgument : "spriteind" "PlayerPistolShootDRSpr"
+													/// @DnDSaveInfo : "spriteind" "PlayerPistolShootDRSpr"
+													sprite_index = PlayerPistolShootDRSpr;
 													image_index = 0;
 												
 													/// @DnDAction : YoYo Games.Common.If_Expression
@@ -1345,9 +1345,9 @@ else
 													/// @DnDVersion : 1
 													/// @DnDHash : 0A49BC28
 													/// @DnDParent : 50D1DC12
-													/// @DnDArgument : "spriteind" "PlayerShootDSpr"
-													/// @DnDSaveInfo : "spriteind" "PlayerShootDSpr"
-													sprite_index = PlayerShootDSpr;
+													/// @DnDArgument : "spriteind" "PlayerPistolShootDSpr"
+													/// @DnDSaveInfo : "spriteind" "PlayerPistolShootDSpr"
+													sprite_index = PlayerPistolShootDSpr;
 													image_index = 0;
 												
 													/// @DnDAction : YoYo Games.Common.If_Expression
@@ -1440,9 +1440,9 @@ else
 												/// @DnDVersion : 1
 												/// @DnDHash : 4ADCF447
 												/// @DnDParent : 0EEAA9F5
-												/// @DnDArgument : "spriteind" "PlayerShootRSpr"
-												/// @DnDSaveInfo : "spriteind" "PlayerShootRSpr"
-												sprite_index = PlayerShootRSpr;
+												/// @DnDArgument : "spriteind" "PlayerPistolShootRSpr"
+												/// @DnDSaveInfo : "spriteind" "PlayerPistolShootRSpr"
+												sprite_index = PlayerPistolShootRSpr;
 												image_index = 0;
 											
 												/// @DnDAction : YoYo Games.Common.If_Expression
@@ -1583,9 +1583,9 @@ else
 								/// @DnDHash : 6B5F0485
 								/// @DnDParent : 77E47EA4
 								/// @DnDArgument : "imageind_relative" "1"
-								/// @DnDArgument : "spriteind" "PlayerShootDoneSpr"
-								/// @DnDSaveInfo : "spriteind" "PlayerShootDoneSpr"
-								sprite_index = PlayerShootDoneSpr;
+								/// @DnDArgument : "spriteind" "PlayerPistolShootDoneSpr"
+								/// @DnDSaveInfo : "spriteind" "PlayerPistolShootDoneSpr"
+								sprite_index = PlayerPistolShootDoneSpr;
 								image_index += 0;
 							}
 						
