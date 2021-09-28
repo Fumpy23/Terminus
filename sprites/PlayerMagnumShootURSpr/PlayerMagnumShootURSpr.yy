@@ -14,7 +14,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 25,
+  "width": 27,
   "height": 31,
   "textureGroupId": {
     "name": "Default",
@@ -90,7 +90,7 @@
     "backdropHeight": 768,
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
-    "xorigin": 12,
+    "xorigin": 13,
     "yorigin": 31,
     "eventToFunction": {},
     "eventStubScript": null,
