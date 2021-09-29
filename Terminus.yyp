@@ -27,6 +27,7 @@
     {"id":{"name":"PlayerTossSound","path":"sounds/PlayerTossSound/PlayerTossSound.yy",},"order":0,},
     {"id":{"name":"BarrierObj","path":"objects/BarrierObj/BarrierObj.yy",},"order":0,},
     {"id":{"name":"PlayerHatchetColSpr","path":"sprites/PlayerHatchetColSpr/PlayerHatchetColSpr.yy",},"order":3,},
+    {"id":{"name":"MagnumBulletSmokeObj","path":"objects/MagnumBulletSmokeObj/MagnumBulletSmokeObj.yy",},"order":5,},
     {"id":{"name":"PushableBarricadeObj","path":"objects/PushableBarricadeObj/PushableBarricadeObj.yy",},"order":3,},
     {"id":{"name":"WallObj","path":"objects/WallObj/WallObj.yy",},"order":0,},
     {"id":{"name":"ClimbableBarricadeObj","path":"objects/ClimbableBarricadeObj/ClimbableBarricadeObj.yy",},"order":3,},

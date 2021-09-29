@@ -89,7 +89,7 @@ can_player_move_right = can_player_move_right && !place_meeting(x + 2, y, WallOb
 /// @DnDArgument : "expr_12" "keyboard_check(ord("I"))"
 /// @DnDArgument : "expr_13" "keyboard_check_pressed(ord("O"))"
 /// @DnDArgument : "expr_14" "keyboard_check_pressed(ord("U")) && !is_player_using_item"
-/// @DnDArgument : "expr_15" "!place_meeting(x + (image_xscale * 5), y, WallObj)"
+/// @DnDArgument : "expr_15" "!place_meeting(x + (image_xscale * 5), y, WallObj) ||((image_xscale == 1 ? !button_right : !button_left) && sprite_index != PlayerPistolShootRSpr && sprite_index != PlayerMagnumShootRSpr)"
 /// @DnDArgument : "expr_16" "player_weapon_using != "None""
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
@@ -123,7 +123,7 @@ climbing_sound_delay = climbing_sound_delay - 1;
 button_ready_attack = keyboard_check(ord("I"));
 button_reload = keyboard_check_pressed(ord("O"));
 has_player_started_item = keyboard_check_pressed(ord("U")) && !is_player_using_item;
-can_player_attack = !place_meeting(x + (image_xscale * 5), y, WallObj);
+can_player_attack = !place_meeting(x + (image_xscale * 5), y, WallObj) ||((image_xscale == 1 ? !button_right : !button_left) && sprite_index != PlayerPistolShootRSpr && sprite_index != PlayerMagnumShootRSpr);
 is_player_using_weapon = player_weapon_using != "None";
 
 /// @DnDAction : YoYo Games.Common.If_Expression
@@ -1641,25 +1641,42 @@ else
 													pistol_bullet_inst.x_step = 2 * sqrt(3) * image_xscale;
 													pistol_bullet_inst.y_step = -2;
 												
-													/// @DnDAction : YoYo Games.Instances.Create_Instance
+													/// @DnDAction : YoYo Games.Loops.For_Loop
 													/// @DnDVersion : 1
-													/// @DnDHash : 2B8E5DA8
+													/// @DnDHash : 62135BE6
 													/// @DnDParent : 0649BE73
-													/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 12 : -12)"
-													/// @DnDArgument : "ypos" "y - sprite_height + (image_xscale == 1? 3 : 4)"
-													/// @DnDArgument : "var" "pistol_flash_inst"
-													/// @DnDArgument : "objectid" "PistolBulletFlashObj"
-													/// @DnDArgument : "layer" ""Front""
-													/// @DnDSaveInfo : "objectid" "PistolBulletFlashObj"
-													pistol_flash_inst = instance_create_layer(x + (image_xscale == 1 ? 12 : -12), y - sprite_height + (image_xscale == 1? 3 : 4), "Front", PistolBulletFlashObj);
-												
-													/// @DnDAction : YoYo Games.Common.Variable
-													/// @DnDVersion : 1
-													/// @DnDHash : 745D9074
-													/// @DnDParent : 0649BE73
-													/// @DnDArgument : "expr" "image_xscale == 1 ? 30 : 150"
-													/// @DnDArgument : "var" "pistol_flash_inst.image_angle"
-													pistol_flash_inst.image_angle = image_xscale == 1 ? 30 : 150;
+													/// @DnDArgument : "cond" "i < 5"
+													for(i = 0; i < 5; i += 1) {
+														/// @DnDAction : YoYo Games.Instances.Create_Instance
+														/// @DnDVersion : 1
+														/// @DnDHash : 2B8E5DA8
+														/// @DnDParent : 62135BE6
+														/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 12 + (i * 8) : -12 - (i * 8))"
+														/// @DnDArgument : "ypos" "y - sprite_height + (image_xscale == 1? 3 - (i * 4): 4 - (i * 4))"
+														/// @DnDArgument : "var" "magnum_smoke_inst"
+														/// @DnDArgument : "objectid" "MagnumBulletSmokeObj"
+														/// @DnDArgument : "layer" ""Front""
+														/// @DnDSaveInfo : "objectid" "MagnumBulletSmokeObj"
+														magnum_smoke_inst = instance_create_layer(x + (image_xscale == 1 ? 12 + (i * 8) : -12 - (i * 8)), y - sprite_height + (image_xscale == 1? 3 - (i * 4): 4 - (i * 4)), "Front", MagnumBulletSmokeObj);
+													
+														/// @DnDAction : YoYo Games.Common.Variable
+														/// @DnDVersion : 1
+														/// @DnDHash : 745D9074
+														/// @DnDInput : 4
+														/// @DnDParent : 62135BE6
+														/// @DnDArgument : "expr" "image_xscale == 1 ? 30 : 150"
+														/// @DnDArgument : "expr_1" "i"
+														/// @DnDArgument : "expr_2" "i * 2"
+														/// @DnDArgument : "expr_3" "30"
+														/// @DnDArgument : "var" "magnum_smoke_inst.image_angle"
+														/// @DnDArgument : "var_1" "magnum_smoke_inst.image_idx"
+														/// @DnDArgument : "var_2" "magnum_smoke_inst.invisible_duration"
+														/// @DnDArgument : "var_3" "magnum_smoke_inst.visible_duration"
+														magnum_smoke_inst.image_angle = image_xscale == 1 ? 30 : 150;
+														magnum_smoke_inst.image_idx = i;
+														magnum_smoke_inst.invisible_duration = i * 2;
+														magnum_smoke_inst.visible_duration = 30;
+													}
 												
 													/// @DnDAction : YoYo Games.Audio.Play_Audio
 													/// @DnDVersion : 1

@@ -18,6 +18,7 @@
 /// @DnDArgument : "expr_28" "1"
 /// @DnDArgument : "expr_29" "1"
 /// @DnDArgument : "expr_32" "1"
+/// @DnDArgument : "expr_37" "1"
 /// @DnDArgument : "expr_40" "1"
 /// @DnDArgument : "expr_41" "MeatItemObj"
 /// @DnDArgument : "expr_44" ""Magnum""
@@ -116,7 +117,7 @@ is_player_finishing_attack = 0;
 is_weapon_being_raised = 0;
 is_weapon_being_lowered = 0;
 is_player_attacking = 0;
-is_reticle_attached = 0;
+is_reticle_attached = 1;
 button_reload = 0;
 is_player_reloading = 0;
 can_player_reload = 1;
