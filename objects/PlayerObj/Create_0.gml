@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7C7918CC
-/// @DnDInput : 53
+/// @DnDInput : 55
 /// @DnDArgument : "expr_2" "1"
 /// @DnDArgument : "expr_3" "300"
 /// @DnDArgument : "expr_4" "blink_time_max"
@@ -18,14 +18,17 @@
 /// @DnDArgument : "expr_28" "1"
 /// @DnDArgument : "expr_29" "1"
 /// @DnDArgument : "expr_32" "1"
+/// @DnDArgument : "expr_37" "1"
 /// @DnDArgument : "expr_40" "1"
 /// @DnDArgument : "expr_41" "MeatItemObj"
-/// @DnDArgument : "expr_44" ""Magnum""
+/// @DnDArgument : "expr_44" ""Hatchet""
 /// @DnDArgument : "expr_45" "5"
 /// @DnDArgument : "expr_46" "vspeed_reduce_delay_max"
 /// @DnDArgument : "expr_47" "8"
 /// @DnDArgument : "expr_48" "hspeed_reduce_delay_max"
 /// @DnDArgument : "expr_49" ""FlashGrenade""
+/// @DnDArgument : "expr_53" "18"
+/// @DnDArgument : "expr_54" "magnum_bullet_load_max"
 /// @DnDArgument : "var" "button_left"
 /// @DnDArgument : "var_1" "button_right"
 /// @DnDArgument : "var_2" "run_speed"
@@ -79,6 +82,8 @@
 /// @DnDArgument : "var_50" "is_player_blinded"
 /// @DnDArgument : "var_51" "is_player_using_weapon"
 /// @DnDArgument : "var_52" "is_player_using_gas_mask"
+/// @DnDArgument : "var_53" "magnum_bullet_load_max"
+/// @DnDArgument : "var_54" "magnum_bullet_load"
 button_left = 0;
 button_right = 0;
 run_speed = 1;
@@ -116,14 +121,14 @@ is_player_finishing_attack = 0;
 is_weapon_being_raised = 0;
 is_weapon_being_lowered = 0;
 is_player_attacking = 0;
-is_reticle_attached = 0;
+is_reticle_attached = 1;
 button_reload = 0;
 is_player_reloading = 0;
 can_player_reload = 1;
 player_item_inst = MeatItemObj;
 is_player_using_item = 0;
 has_player_started_item = 0;
-player_weapon_using = "Magnum";
+player_weapon_using = "Hatchet";
 vspeed_reduce_delay_max = 5;
 vspeed_reduce_delay = vspeed_reduce_delay_max;
 hspeed_reduce_delay_max = 8;
@@ -132,6 +137,8 @@ player_item_using = "FlashGrenade";
 is_player_blinded = 0;
 is_player_using_weapon = 0;
 is_player_using_gas_mask = 0;
+magnum_bullet_load_max = 18;
+magnum_bullet_load = magnum_bullet_load_max;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1

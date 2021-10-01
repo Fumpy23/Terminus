@@ -721,34 +721,148 @@ else
 				
 					/// @DnDAction : YoYo Games.Common.If_Expression
 					/// @DnDVersion : 1
-					/// @DnDHash : 6510CBED
+					/// @DnDHash : 602125F9
 					/// @DnDParent : 4F326A45
-					/// @DnDArgument : "expr" "is_player_reloading && image_index == 3"
-					if(is_player_reloading && image_index == 3)
+					/// @DnDArgument : "expr" "player_weapon_using == "Pistol""
+					if(player_weapon_using == "Pistol")
 					{
-						/// @DnDAction : YoYo Games.Audio.Play_Audio
+						/// @DnDAction : YoYo Games.Common.If_Expression
 						/// @DnDVersion : 1
-						/// @DnDHash : 2117FBB0
-						/// @DnDParent : 6510CBED
-						/// @DnDArgument : "soundid" "PlayerPistolReload1Sound"
-						/// @DnDSaveInfo : "soundid" "PlayerPistolReload1Sound"
-						audio_play_sound(PlayerPistolReload1Sound, 0, 0);
+						/// @DnDHash : 6510CBED
+						/// @DnDParent : 602125F9
+						/// @DnDArgument : "expr" "is_player_reloading && image_index == 3"
+						if(is_player_reloading && image_index == 3)
+						{
+							/// @DnDAction : YoYo Games.Audio.Play_Audio
+							/// @DnDVersion : 1
+							/// @DnDHash : 2117FBB0
+							/// @DnDParent : 6510CBED
+							/// @DnDArgument : "soundid" "PlayerPistolReload1Sound"
+							/// @DnDSaveInfo : "soundid" "PlayerPistolReload1Sound"
+							audio_play_sound(PlayerPistolReload1Sound, 0, 0);
+						}
+					
+						/// @DnDAction : YoYo Games.Common.If_Expression
+						/// @DnDVersion : 1
+						/// @DnDHash : 3C73E8B2
+						/// @DnDParent : 602125F9
+						/// @DnDArgument : "expr" "is_player_reloading && image_index == 16"
+						if(is_player_reloading && image_index == 16)
+						{
+							/// @DnDAction : YoYo Games.Audio.Play_Audio
+							/// @DnDVersion : 1
+							/// @DnDHash : 4A51F46F
+							/// @DnDParent : 3C73E8B2
+							/// @DnDArgument : "soundid" "PlayerPistolReload2Sound"
+							/// @DnDSaveInfo : "soundid" "PlayerPistolReload2Sound"
+							audio_play_sound(PlayerPistolReload2Sound, 0, 0);
+						}
 					}
 				
 					/// @DnDAction : YoYo Games.Common.If_Expression
 					/// @DnDVersion : 1
-					/// @DnDHash : 3C73E8B2
+					/// @DnDHash : 6151A1F8
 					/// @DnDParent : 4F326A45
-					/// @DnDArgument : "expr" "is_player_reloading && image_index == 16"
-					if(is_player_reloading && image_index == 16)
+					/// @DnDArgument : "expr" "player_weapon_using == "Magnum""
+					if(player_weapon_using == "Magnum")
 					{
-						/// @DnDAction : YoYo Games.Audio.Play_Audio
+						/// @DnDAction : YoYo Games.Common.If_Expression
 						/// @DnDVersion : 1
-						/// @DnDHash : 4A51F46F
-						/// @DnDParent : 3C73E8B2
-						/// @DnDArgument : "soundid" "PlayerPistolReload2Sound"
-						/// @DnDSaveInfo : "soundid" "PlayerPistolReload2Sound"
-						audio_play_sound(PlayerPistolReload2Sound, 0, 0);
+						/// @DnDHash : 636BC7E0
+						/// @DnDParent : 6151A1F8
+						/// @DnDArgument : "expr" "is_player_reloading && image_index == 4"
+						if(is_player_reloading && image_index == 4)
+						{
+							/// @DnDAction : YoYo Games.Audio.Play_Audio
+							/// @DnDVersion : 1
+							/// @DnDHash : 67471A78
+							/// @DnDParent : 636BC7E0
+							/// @DnDArgument : "soundid" "PlayerMagnumReload1Sound"
+							/// @DnDSaveInfo : "soundid" "PlayerMagnumReload1Sound"
+							audio_play_sound(PlayerMagnumReload1Sound, 0, 0);
+						}
+					
+						/// @DnDAction : YoYo Games.Common.If_Expression
+						/// @DnDVersion : 1
+						/// @DnDHash : 3765E0B3
+						/// @DnDParent : 6151A1F8
+						/// @DnDArgument : "expr" "is_player_reloading && image_index > 10"
+						if(is_player_reloading && image_index > 10)
+						{
+							/// @DnDAction : YoYo Games.Common.If_Expression
+							/// @DnDVersion : 1
+							/// @DnDHash : 243B805E
+							/// @DnDParent : 3765E0B3
+							/// @DnDArgument : "expr" "magnum_bullet_load > 0"
+							if(magnum_bullet_load > 0)
+							{
+								/// @DnDAction : YoYo Games.Common.Variable
+								/// @DnDVersion : 1
+								/// @DnDHash : 73D7F3B2
+								/// @DnDParent : 243B805E
+								/// @DnDArgument : "expr" "magnum_bullet_load - 1"
+								/// @DnDArgument : "var" "magnum_bullet_load"
+								magnum_bullet_load = magnum_bullet_load - 1;
+							}
+						
+							/// @DnDAction : YoYo Games.Common.Else
+							/// @DnDVersion : 1
+							/// @DnDHash : 7AB8ABAE
+							/// @DnDParent : 3765E0B3
+							else
+							{
+								/// @DnDAction : YoYo Games.Common.Variable
+								/// @DnDVersion : 1
+								/// @DnDHash : 516A3BB5
+								/// @DnDParent : 7AB8ABAE
+								/// @DnDArgument : "expr" "magnum_bullet_load_max"
+								/// @DnDArgument : "var" "magnum_bullet_load"
+								magnum_bullet_load = magnum_bullet_load_max;
+							
+								/// @DnDAction : YoYo Games.Audio.Play_Audio
+								/// @DnDVersion : 1
+								/// @DnDHash : 66E5CBD0
+								/// @DnDParent : 7AB8ABAE
+								/// @DnDArgument : "soundid" "PlayerMagnumBulletLoadSound"
+								/// @DnDSaveInfo : "soundid" "PlayerMagnumBulletLoadSound"
+								audio_play_sound(PlayerMagnumBulletLoadSound, 0, 0);
+							}
+						}
+					
+						/// @DnDAction : YoYo Games.Common.If_Expression
+						/// @DnDVersion : 1
+						/// @DnDHash : 44789ED1
+						/// @DnDParent : 6151A1F8
+						/// @DnDArgument : "expr" "is_player_reloading && image_index >= image_number - 3"
+						if(is_player_reloading && image_index >= image_number - 3)
+						{
+							/// @DnDAction : YoYo Games.Audio.If_Audio_Playing
+							/// @DnDVersion : 1
+							/// @DnDHash : 1F52B2A7
+							/// @DnDParent : 44789ED1
+							/// @DnDArgument : "soundid" "PlayerMagnumReload2Sound"
+							/// @DnDArgument : "not" "1"
+							/// @DnDSaveInfo : "soundid" "PlayerMagnumReload2Sound"
+							var l1F52B2A7_0 = PlayerMagnumReload2Sound;
+							if (!audio_is_playing(l1F52B2A7_0))
+							{
+								/// @DnDAction : YoYo Games.Audio.Play_Audio
+								/// @DnDVersion : 1
+								/// @DnDHash : 135BB48D
+								/// @DnDParent : 1F52B2A7
+								/// @DnDArgument : "soundid" "PlayerMagnumReload2Sound"
+								/// @DnDSaveInfo : "soundid" "PlayerMagnumReload2Sound"
+								audio_play_sound(PlayerMagnumReload2Sound, 0, 0);
+							}
+						
+							/// @DnDAction : YoYo Games.Common.Variable
+							/// @DnDVersion : 1
+							/// @DnDHash : 5B418C2E
+							/// @DnDParent : 44789ED1
+							/// @DnDArgument : "expr" "magnum_bullet_load_max"
+							/// @DnDArgument : "var" "magnum_bullet_load"
+							magnum_bullet_load = magnum_bullet_load_max;
+						}
 					}
 				
 					/// @DnDAction : YoYo Games.Common.If_Expression
@@ -1641,6 +1755,14 @@ else
 													pistol_bullet_inst.x_step = 2 * sqrt(3) * image_xscale;
 													pistol_bullet_inst.y_step = -2;
 												
+													/// @DnDAction : YoYo Games.Audio.Play_Audio
+													/// @DnDVersion : 1
+													/// @DnDHash : 7AA63CD7
+													/// @DnDParent : 0649BE73
+													/// @DnDArgument : "soundid" "PlayerMagnumShootSound"
+													/// @DnDSaveInfo : "soundid" "PlayerMagnumShootSound"
+													audio_play_sound(PlayerMagnumShootSound, 0, 0);
+												
 													/// @DnDAction : YoYo Games.Loops.For_Loop
 													/// @DnDVersion : 1
 													/// @DnDHash : 62135BE6
@@ -1651,13 +1773,13 @@ else
 														/// @DnDVersion : 1
 														/// @DnDHash : 2B8E5DA8
 														/// @DnDParent : 62135BE6
-														/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 12 + (i * 8) : -12 - (i * 8))"
-														/// @DnDArgument : "ypos" "y - sprite_height + (image_xscale == 1? 3 - (i * 4): 4 - (i * 4))"
+														/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 20 + (i * 7) : -20 - (i * 7))"
+														/// @DnDArgument : "ypos" "y - sprite_height + (image_xscale == 1? 1 - (i * 4): 2 - (i * 4))"
 														/// @DnDArgument : "var" "magnum_smoke_inst"
 														/// @DnDArgument : "objectid" "MagnumBulletSmokeObj"
 														/// @DnDArgument : "layer" ""Front""
 														/// @DnDSaveInfo : "objectid" "MagnumBulletSmokeObj"
-														magnum_smoke_inst = instance_create_layer(x + (image_xscale == 1 ? 12 + (i * 8) : -12 - (i * 8)), y - sprite_height + (image_xscale == 1? 3 - (i * 4): 4 - (i * 4)), "Front", MagnumBulletSmokeObj);
+														magnum_smoke_inst = instance_create_layer(x + (image_xscale == 1 ? 20 + (i * 7) : -20 - (i * 7)), y - sprite_height + (image_xscale == 1? 1 - (i * 4): 2 - (i * 4)), "Front", MagnumBulletSmokeObj);
 													
 														/// @DnDAction : YoYo Games.Common.Variable
 														/// @DnDVersion : 1
@@ -1677,14 +1799,6 @@ else
 														magnum_smoke_inst.invisible_duration = i * 2;
 														magnum_smoke_inst.visible_duration = 30;
 													}
-												
-													/// @DnDAction : YoYo Games.Audio.Play_Audio
-													/// @DnDVersion : 1
-													/// @DnDHash : 7AA63CD7
-													/// @DnDParent : 0649BE73
-													/// @DnDArgument : "soundid" "PlayerPistolShootSound"
-													/// @DnDSaveInfo : "soundid" "PlayerPistolShootSound"
-													audio_play_sound(PlayerPistolShootSound, 0, 0);
 												}
 											}
 										}
@@ -1752,33 +1866,50 @@ else
 													pistol_bullet_inst.x_step = 0;
 													pistol_bullet_inst.y_step = -4;
 												
-													/// @DnDAction : YoYo Games.Instances.Create_Instance
-													/// @DnDVersion : 1
-													/// @DnDHash : 4C0A163A
-													/// @DnDParent : 7D40F3FC
-													/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? -4 : 3)"
-													/// @DnDArgument : "ypos" "y - sprite_height - 3"
-													/// @DnDArgument : "var" "pistol_flash_inst"
-													/// @DnDArgument : "objectid" "PistolBulletFlashObj"
-													/// @DnDArgument : "layer" ""Front""
-													/// @DnDSaveInfo : "objectid" "PistolBulletFlashObj"
-													pistol_flash_inst = instance_create_layer(x + (image_xscale == 1 ? -4 : 3), y - sprite_height - 3, "Front", PistolBulletFlashObj);
-												
-													/// @DnDAction : YoYo Games.Common.Variable
-													/// @DnDVersion : 1
-													/// @DnDHash : 38B2469F
-													/// @DnDParent : 7D40F3FC
-													/// @DnDArgument : "expr" "90"
-													/// @DnDArgument : "var" "pistol_flash_inst.image_angle"
-													pistol_flash_inst.image_angle = 90;
-												
 													/// @DnDAction : YoYo Games.Audio.Play_Audio
 													/// @DnDVersion : 1
 													/// @DnDHash : 5152D050
 													/// @DnDParent : 7D40F3FC
-													/// @DnDArgument : "soundid" "PlayerPistolShootSound"
-													/// @DnDSaveInfo : "soundid" "PlayerPistolShootSound"
-													audio_play_sound(PlayerPistolShootSound, 0, 0);
+													/// @DnDArgument : "soundid" "PlayerMagnumShootSound"
+													/// @DnDSaveInfo : "soundid" "PlayerMagnumShootSound"
+													audio_play_sound(PlayerMagnumShootSound, 0, 0);
+												
+													/// @DnDAction : YoYo Games.Loops.For_Loop
+													/// @DnDVersion : 1
+													/// @DnDHash : 10AD3EB1
+													/// @DnDParent : 7D40F3FC
+													/// @DnDArgument : "cond" "i < 5"
+													for(i = 0; i < 5; i += 1) {
+														/// @DnDAction : YoYo Games.Instances.Create_Instance
+														/// @DnDVersion : 1
+														/// @DnDHash : 62E53EDA
+														/// @DnDParent : 10AD3EB1
+														/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? -4: 3)"
+														/// @DnDArgument : "ypos" "y - sprite_height + (image_xscale == 1 ? -7 - (i * 8) : -7 - (i * 8))"
+														/// @DnDArgument : "var" "magnum_smoke_inst"
+														/// @DnDArgument : "objectid" "MagnumBulletSmokeObj"
+														/// @DnDArgument : "layer" ""Front""
+														/// @DnDSaveInfo : "objectid" "MagnumBulletSmokeObj"
+														magnum_smoke_inst = instance_create_layer(x + (image_xscale == 1 ? -4: 3), y - sprite_height + (image_xscale == 1 ? -7 - (i * 8) : -7 - (i * 8)), "Front", MagnumBulletSmokeObj);
+													
+														/// @DnDAction : YoYo Games.Common.Variable
+														/// @DnDVersion : 1
+														/// @DnDHash : 68D91427
+														/// @DnDInput : 4
+														/// @DnDParent : 10AD3EB1
+														/// @DnDArgument : "expr" "90"
+														/// @DnDArgument : "expr_1" "i"
+														/// @DnDArgument : "expr_2" "i * 2"
+														/// @DnDArgument : "expr_3" "30"
+														/// @DnDArgument : "var" "magnum_smoke_inst.image_angle"
+														/// @DnDArgument : "var_1" "magnum_smoke_inst.image_idx"
+														/// @DnDArgument : "var_2" "magnum_smoke_inst.invisible_duration"
+														/// @DnDArgument : "var_3" "magnum_smoke_inst.visible_duration"
+														magnum_smoke_inst.image_angle = 90;
+														magnum_smoke_inst.image_idx = i;
+														magnum_smoke_inst.invisible_duration = i * 2;
+														magnum_smoke_inst.visible_duration = 30;
+													}
 												}
 											}
 										}
@@ -1862,33 +1993,50 @@ else
 														pistol_bullet_inst.x_step = 2 * sqrt(3) * image_xscale;
 														pistol_bullet_inst.y_step = 2;
 													
-														/// @DnDAction : YoYo Games.Instances.Create_Instance
-														/// @DnDVersion : 1
-														/// @DnDHash : 17195AAF
-														/// @DnDParent : 027F8F82
-														/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 12 : -11)"
-														/// @DnDArgument : "ypos" "y - (image_xscale == 1 ? 9 : 8)"
-														/// @DnDArgument : "var" "pistol_flash_inst"
-														/// @DnDArgument : "objectid" "PistolBulletFlashObj"
-														/// @DnDArgument : "layer" ""Front""
-														/// @DnDSaveInfo : "objectid" "PistolBulletFlashObj"
-														pistol_flash_inst = instance_create_layer(x + (image_xscale == 1 ? 12 : -11), y - (image_xscale == 1 ? 9 : 8), "Front", PistolBulletFlashObj);
-													
-														/// @DnDAction : YoYo Games.Common.Variable
-														/// @DnDVersion : 1
-														/// @DnDHash : 0D189697
-														/// @DnDParent : 027F8F82
-														/// @DnDArgument : "expr" "image_xscale == 1 ? -30 : -145"
-														/// @DnDArgument : "var" "pistol_flash_inst.image_angle"
-														pistol_flash_inst.image_angle = image_xscale == 1 ? -30 : -145;
-													
 														/// @DnDAction : YoYo Games.Audio.Play_Audio
 														/// @DnDVersion : 1
 														/// @DnDHash : 6DF26435
 														/// @DnDParent : 027F8F82
-														/// @DnDArgument : "soundid" "PlayerPistolShootSound"
-														/// @DnDSaveInfo : "soundid" "PlayerPistolShootSound"
-														audio_play_sound(PlayerPistolShootSound, 0, 0);
+														/// @DnDArgument : "soundid" "PlayerMagnumShootSound"
+														/// @DnDSaveInfo : "soundid" "PlayerMagnumShootSound"
+														audio_play_sound(PlayerMagnumShootSound, 0, 0);
+													
+														/// @DnDAction : YoYo Games.Loops.For_Loop
+														/// @DnDVersion : 1
+														/// @DnDHash : 06B1389E
+														/// @DnDParent : 027F8F82
+														/// @DnDArgument : "cond" "i < 5"
+														for(i = 0; i < 5; i += 1) {
+															/// @DnDAction : YoYo Games.Instances.Create_Instance
+															/// @DnDVersion : 1
+															/// @DnDHash : 22C87E7E
+															/// @DnDParent : 06B1389E
+															/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 20 + (i * 7) : -20 - (i * 7))"
+															/// @DnDArgument : "ypos" "y + (image_xscale == 1? -5 + (i * 4): -4 + (i * 4))"
+															/// @DnDArgument : "var" "magnum_smoke_inst"
+															/// @DnDArgument : "objectid" "MagnumBulletSmokeObj"
+															/// @DnDArgument : "layer" ""Front""
+															/// @DnDSaveInfo : "objectid" "MagnumBulletSmokeObj"
+															magnum_smoke_inst = instance_create_layer(x + (image_xscale == 1 ? 20 + (i * 7) : -20 - (i * 7)), y + (image_xscale == 1? -5 + (i * 4): -4 + (i * 4)), "Front", MagnumBulletSmokeObj);
+														
+															/// @DnDAction : YoYo Games.Common.Variable
+															/// @DnDVersion : 1
+															/// @DnDHash : 574943F3
+															/// @DnDInput : 4
+															/// @DnDParent : 06B1389E
+															/// @DnDArgument : "expr" "image_xscale == 1 ? -30 : -150"
+															/// @DnDArgument : "expr_1" "i"
+															/// @DnDArgument : "expr_2" "i * 2"
+															/// @DnDArgument : "expr_3" "30"
+															/// @DnDArgument : "var" "magnum_smoke_inst.image_angle"
+															/// @DnDArgument : "var_1" "magnum_smoke_inst.image_idx"
+															/// @DnDArgument : "var_2" "magnum_smoke_inst.invisible_duration"
+															/// @DnDArgument : "var_3" "magnum_smoke_inst.visible_duration"
+															magnum_smoke_inst.image_angle = image_xscale == 1 ? -30 : -150;
+															magnum_smoke_inst.image_idx = i;
+															magnum_smoke_inst.invisible_duration = i * 2;
+															magnum_smoke_inst.visible_duration = 30;
+														}
 													}
 												}
 											}
@@ -1956,33 +2104,50 @@ else
 														pistol_bullet_inst.x_step = 0;
 														pistol_bullet_inst.y_step = 4;
 													
-														/// @DnDAction : YoYo Games.Instances.Create_Instance
-														/// @DnDVersion : 1
-														/// @DnDHash : 2609E4B3
-														/// @DnDParent : 704A60E4
-														/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 0 : 1)"
-														/// @DnDArgument : "ypos" "y + 3"
-														/// @DnDArgument : "var" "pistol_flash_inst"
-														/// @DnDArgument : "objectid" "PistolBulletFlashObj"
-														/// @DnDArgument : "layer" ""Front""
-														/// @DnDSaveInfo : "objectid" "PistolBulletFlashObj"
-														pistol_flash_inst = instance_create_layer(x + (image_xscale == 1 ? 0 : 1), y + 3, "Front", PistolBulletFlashObj);
-													
-														/// @DnDAction : YoYo Games.Common.Variable
-														/// @DnDVersion : 1
-														/// @DnDHash : 7C572D2E
-														/// @DnDParent : 704A60E4
-														/// @DnDArgument : "expr" "-90"
-														/// @DnDArgument : "var" "pistol_flash_inst.image_angle"
-														pistol_flash_inst.image_angle = -90;
-													
 														/// @DnDAction : YoYo Games.Audio.Play_Audio
 														/// @DnDVersion : 1
 														/// @DnDHash : 433EE8A0
 														/// @DnDParent : 704A60E4
-														/// @DnDArgument : "soundid" "PlayerPistolShootSound"
-														/// @DnDSaveInfo : "soundid" "PlayerPistolShootSound"
-														audio_play_sound(PlayerPistolShootSound, 0, 0);
+														/// @DnDArgument : "soundid" "PlayerMagnumShootSound"
+														/// @DnDSaveInfo : "soundid" "PlayerMagnumShootSound"
+														audio_play_sound(PlayerMagnumShootSound, 0, 0);
+													
+														/// @DnDAction : YoYo Games.Loops.For_Loop
+														/// @DnDVersion : 1
+														/// @DnDHash : 5D48FE35
+														/// @DnDParent : 704A60E4
+														/// @DnDArgument : "cond" "i < 5"
+														for(i = 0; i < 5; i += 1) {
+															/// @DnDAction : YoYo Games.Instances.Create_Instance
+															/// @DnDVersion : 1
+															/// @DnDHash : 5F5039C0
+															/// @DnDParent : 5D48FE35
+															/// @DnDArgument : "xpos" "x + (image_xscale == 1 ? 0: 1)"
+															/// @DnDArgument : "ypos" "y + (image_xscale == 1 ? 12 + (i * 8) : 12 + (i * 8))"
+															/// @DnDArgument : "var" "magnum_smoke_inst"
+															/// @DnDArgument : "objectid" "MagnumBulletSmokeObj"
+															/// @DnDArgument : "layer" ""Front""
+															/// @DnDSaveInfo : "objectid" "MagnumBulletSmokeObj"
+															magnum_smoke_inst = instance_create_layer(x + (image_xscale == 1 ? 0: 1), y + (image_xscale == 1 ? 12 + (i * 8) : 12 + (i * 8)), "Front", MagnumBulletSmokeObj);
+														
+															/// @DnDAction : YoYo Games.Common.Variable
+															/// @DnDVersion : 1
+															/// @DnDHash : 4A853CCD
+															/// @DnDInput : 4
+															/// @DnDParent : 5D48FE35
+															/// @DnDArgument : "expr" "-90"
+															/// @DnDArgument : "expr_1" "i"
+															/// @DnDArgument : "expr_2" "i * 2"
+															/// @DnDArgument : "expr_3" "30"
+															/// @DnDArgument : "var" "magnum_smoke_inst.image_angle"
+															/// @DnDArgument : "var_1" "magnum_smoke_inst.image_idx"
+															/// @DnDArgument : "var_2" "magnum_smoke_inst.invisible_duration"
+															/// @DnDArgument : "var_3" "magnum_smoke_inst.visible_duration"
+															magnum_smoke_inst.image_angle = -90;
+															magnum_smoke_inst.image_idx = i;
+															magnum_smoke_inst.invisible_duration = i * 2;
+															magnum_smoke_inst.visible_duration = 30;
+														}
 													}
 												}
 											}
@@ -2021,9 +2186,9 @@ else
 													/// @DnDVersion : 1
 													/// @DnDHash : 37D11489
 													/// @DnDParent : 482D5E02
-													/// @DnDArgument : "soundid" "PlayerPistolShootSound"
-													/// @DnDSaveInfo : "soundid" "PlayerPistolShootSound"
-													audio_play_sound(PlayerPistolShootSound, 0, 0);
+													/// @DnDArgument : "soundid" "PlayerMagnumShootSound"
+													/// @DnDSaveInfo : "soundid" "PlayerMagnumShootSound"
+													audio_play_sound(PlayerMagnumShootSound, 0, 0);
 												
 													/// @DnDAction : YoYo Games.Common.Variable
 													/// @DnDVersion : 1
