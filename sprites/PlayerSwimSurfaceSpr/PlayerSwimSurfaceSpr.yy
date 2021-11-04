@@ -51,6 +51,9 @@
     {"compositeImage":{"FrameId":{"name":"14bab73e-16e4-4136-8db7-8393b26d0520","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"14bab73e-16e4-4136-8db7-8393b26d0520","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},"LayerId":{"name":"26b360d4-0f24-41ce-9333-071b1898ce77","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"PlayerSwimSurfaceSpr","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},"resourceVersion":"1.0","name":"14bab73e-16e4-4136-8db7-8393b26d0520","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ae6a29d8-233c-40cc-9595-b66c9bda0c48","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ae6a29d8-233c-40cc-9595-b66c9bda0c48","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},"LayerId":{"name":"26b360d4-0f24-41ce-9333-071b1898ce77","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"PlayerSwimSurfaceSpr","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},"resourceVersion":"1.0","name":"ae6a29d8-233c-40cc-9595-b66c9bda0c48","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"PlayerSwimSurfaceSpr","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},
@@ -60,7 +63,7 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 9.0,
+    "length": 10.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
@@ -74,6 +77,7 @@
             {"id":"9dae2874-1e13-4c45-a63e-a94c28ed2b21","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c27c205c-9f18-4d25-8494-a8ec7b64d043","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f9183af3-af24-4245-ab9c-8e36698cce72","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"80fb170f-e288-4f1f-ba8e-6e6b2f78eef5","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8bdacac5-1179-4583-a12a-42a272aaa6f6","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"14bab73e-16e4-4136-8db7-8393b26d0520","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"86092ce7-7cad-49bd-9c38-158458a32cee","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ae6a29d8-233c-40cc-9595-b66c9bda0c48","path":"sprites/PlayerSwimSurfaceSpr/PlayerSwimSurfaceSpr.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
