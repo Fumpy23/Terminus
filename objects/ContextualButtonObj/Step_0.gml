@@ -20,12 +20,36 @@ if(instance_exists(PlayerObj))
 /// @DnDArgument : "expr" "instance_exists(PlayerSwimObj)"
 if(instance_exists(PlayerSwimObj))
 {
-	/// @DnDAction : YoYo Games.Movement.Jump_To_Point
+	/// @DnDAction : YoYo Games.Common.If_Expression
 	/// @DnDVersion : 1
-	/// @DnDHash : 6E4FFC94
+	/// @DnDHash : 778C54DB
 	/// @DnDParent : 1ED4E65C
-	/// @DnDArgument : "x" "PlayerSwimObj.x + (PlayerSwimObj.image_xscale * 1)"
-	/// @DnDArgument : "y" "PlayerSwimObj.y - PlayerSwimObj.sprite_height - 3"
-	x = PlayerSwimObj.x + (PlayerSwimObj.image_xscale * 1);
-	y = PlayerSwimObj.y - PlayerSwimObj.sprite_height - 3;
+	/// @DnDArgument : "expr" "PlayerSwimObj.sprite_index == PlayerSwimMoveSpr"
+	if(PlayerSwimObj.sprite_index == PlayerSwimMoveSpr)
+	{
+		/// @DnDAction : YoYo Games.Movement.Jump_To_Point
+		/// @DnDVersion : 1
+		/// @DnDHash : 321B06E7
+		/// @DnDParent : 778C54DB
+		/// @DnDArgument : "x" "PlayerSwimObj.x + (PlayerSwimObj.image_xscale * 3)"
+		/// @DnDArgument : "y" "PlayerSwimObj.y - PlayerSwimObj.sprite_height - 3"
+		x = PlayerSwimObj.x + (PlayerSwimObj.image_xscale * 3);
+		y = PlayerSwimObj.y - PlayerSwimObj.sprite_height - 3;
+	}
+
+	/// @DnDAction : YoYo Games.Common.Else
+	/// @DnDVersion : 1
+	/// @DnDHash : 231819F5
+	/// @DnDParent : 1ED4E65C
+	else
+	{
+		/// @DnDAction : YoYo Games.Movement.Jump_To_Point
+		/// @DnDVersion : 1
+		/// @DnDHash : 6E4FFC94
+		/// @DnDParent : 231819F5
+		/// @DnDArgument : "x" "PlayerSwimObj.x"
+		/// @DnDArgument : "y" "PlayerSwimObj.y - PlayerSwimObj.sprite_height - 3"
+		x = PlayerSwimObj.x;
+		y = PlayerSwimObj.y - PlayerSwimObj.sprite_height - 3;
+	}
 }
