@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 0713D50F
-/// @DnDInput : 16
+/// @DnDInput : 21
 /// @DnDArgument : "expr_1" "5"
 /// @DnDArgument : "expr_2" "player_splash_delay_max"
 /// @DnDArgument : "expr_3" "1"
@@ -11,6 +11,8 @@
 /// @DnDArgument : "expr_10" "1"
 /// @DnDArgument : "expr_11" "noone"
 /// @DnDArgument : "expr_13" "1"
+/// @DnDArgument : "expr_18" "40"
+/// @DnDArgument : "expr_19" "-1"
 /// @DnDArgument : "var" "hspeed"
 /// @DnDArgument : "var_1" "player_splash_delay_max"
 /// @DnDArgument : "var_2" "player_splash_delay"
@@ -27,6 +29,11 @@
 /// @DnDArgument : "var_13" "is_player_surfaced"
 /// @DnDArgument : "var_14" "is_contextual_button_being_used"
 /// @DnDArgument : "var_15" "button_up"
+/// @DnDArgument : "var_16" "is_player_hurt"
+/// @DnDArgument : "var_17" "button_hurt"
+/// @DnDArgument : "var_18" "dive_sound_delay_max"
+/// @DnDArgument : "var_19" "dive_sound_delay"
+/// @DnDArgument : "var_20" "is_swim_stroke"
 hspeed = 0;
 player_splash_delay_max = 5;
 player_splash_delay = player_splash_delay_max;
@@ -43,6 +50,11 @@ button_down = 0;
 is_player_surfaced = 1;
 is_contextual_button_being_used = 0;
 button_up = 0;
+is_player_hurt = 0;
+button_hurt = 0;
+dive_sound_delay_max = 40;
+dive_sound_delay = -1;
+is_swim_stroke = 0;
 
 /// @DnDAction : YoYo Games.Instances.Create_Instance
 /// @DnDVersion : 1
