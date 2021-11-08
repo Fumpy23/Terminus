@@ -16,7 +16,8 @@
     {"instances":[],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Frontmost","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Front","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"PlayerSwimObj","path":"objects/PlayerSwimObj/PlayerSwimObj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":96.0,"y":224.0,"resourceVersion":"1.0","name":"inst_49677243","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"PlayerSwimObj","path":"objects/PlayerSwimObj/PlayerSwimObj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":true,"inheritItemSettings":false,"x":102.0,"y":224.0,"resourceVersion":"1.0","name":"inst_3D97133B","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"PlayerObj","path":"objects/PlayerObj/PlayerObj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":122.0,"y":164.0,"resourceVersion":"1.0","name":"inst_182EC37B","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Middlin","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"LadderMObj","path":"objects/LadderMObj/LadderMObj.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":368.0,"y":183.0,"resourceVersion":"1.0","name":"inst_6F12EE75","tags":[],"resourceType":"GMRInstance",},
@@ -163,7 +164,8 @@
     {"name":"inst_6A92CAAC","path":"rooms/DebugRoom1/DebugRoom1.yy",},
     {"name":"inst_6CB2B65","path":"rooms/DebugRoom1/DebugRoom1.yy",},
     {"name":"inst_6BD3D0BB","path":"rooms/DebugRoom1/DebugRoom1.yy",},
-    {"name":"inst_49677243","path":"rooms/DebugRoom1/DebugRoom1.yy",},
+    {"name":"inst_3D97133B","path":"rooms/DebugRoom1/DebugRoom1.yy",},
+    {"name":"inst_182EC37B","path":"rooms/DebugRoom1/DebugRoom1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
