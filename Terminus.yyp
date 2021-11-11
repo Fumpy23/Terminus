@@ -90,6 +90,7 @@
     {"id":{"name":"FlashGrenadeItemObj","path":"objects/FlashGrenadeItemObj/FlashGrenadeItemObj.yy",},"order":1,},
     {"id":{"name":"MagnumBulletObj","path":"objects/MagnumBulletObj/MagnumBulletObj.yy",},"order":6,},
     {"id":{"name":"PlayerPistolShootDSpr","path":"sprites/PlayerPistolShootDSpr/PlayerPistolShootDSpr.yy",},"order":7,},
+    {"id":{"name":"PlayerShotgunShootRSpr","path":"sprites/PlayerShotgunShootRSpr/PlayerShotgunShootRSpr.yy",},"order":0,},
     {"id":{"name":"PlayerPistolShootReadySpr","path":"sprites/PlayerPistolShootReadySpr/PlayerPistolShootReadySpr.yy",},"order":1,},
     {"id":{"name":"DrawerWallObj","path":"objects/DrawerWallObj/DrawerWallObj.yy",},"order":3,},
     {"id":{"name":"PlayerReticleColSpr","path":"sprites/PlayerReticleColSpr/PlayerReticleColSpr.yy",},"order":10,},
@@ -113,6 +114,7 @@
     {"id":{"name":"PlayerPistolShootRSpr","path":"sprites/PlayerPistolShootRSpr/PlayerPistolShootRSpr.yy",},"order":0,},
     {"id":{"name":"PushableWallDrawerObj","path":"objects/PushableWallDrawerObj/PushableWallDrawerObj.yy",},"order":6,},
     {"id":{"name":"PlayerSwimDiveSpr","path":"sprites/PlayerSwimDiveSpr/PlayerSwimDiveSpr.yy",},"order":3,},
+    {"id":{"name":"PlayerShotgunShootURSpr","path":"sprites/PlayerShotgunShootURSpr/PlayerShotgunShootURSpr.yy",},"order":1,},
     {"id":{"name":"DrawerMSpr","path":"sprites/DrawerMSpr/DrawerMSpr.yy",},"order":0,},
     {"id":{"name":"PlayerMagnumReload1Sound","path":"sounds/PlayerMagnumReload1Sound/PlayerMagnumReload1Sound.yy",},"order":7,},
     {"id":{"name":"HatchetCarryFrontSpr","path":"sprites/HatchetCarryFrontSpr/HatchetCarryFrontSpr.yy",},"order":5,},
@@ -194,6 +196,7 @@
     {"folderPath":"folders/Sprites/Player/PlayerHatchet.yy","order":14,"resourceVersion":"1.0","name":"PlayerHatchet","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Player/PlayerMagnum.yy","order":15,"resourceVersion":"1.0","name":"PlayerMagnum","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Player/PlayerSwimming.yy","order":16,"resourceVersion":"1.0","name":"PlayerSwimming","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Player/PlayerShotgun.yy","order":17,"resourceVersion":"1.0","name":"PlayerShotgun","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
