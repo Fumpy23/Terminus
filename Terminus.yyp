@@ -83,6 +83,7 @@
     {"id":{"name":"PlayerMagnumShootDSpr","path":"sprites/PlayerMagnumShootDSpr/PlayerMagnumShootDSpr.yy",},"order":5,},
     {"id":{"name":"InvisibleWallObj","path":"objects/InvisibleWallObj/InvisibleWallObj.yy",},"order":2,},
     {"id":{"name":"PlayerMagnumReloadSpr","path":"sprites/PlayerMagnumReloadSpr/PlayerMagnumReloadSpr.yy",},"order":0,},
+    {"id":{"name":"PlayerShotgunShootUSpr","path":"sprites/PlayerShotgunShootUSpr/PlayerShotgunShootUSpr.yy",},"order":2,},
     {"id":{"name":"PlayerHatchetReadySpr","path":"sprites/PlayerHatchetReadySpr/PlayerHatchetReadySpr.yy",},"order":0,},
     {"id":{"name":"PlayerPistolReload1Sound","path":"sounds/PlayerPistolReload1Sound/PlayerPistolReload1Sound.yy",},"order":0,},
     {"id":{"name":"LadderSObj","path":"objects/LadderSObj/LadderSObj.yy",},"order":1,},
