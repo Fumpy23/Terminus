@@ -15,6 +15,7 @@
     {"id":{"name":"PlayerSwimMoveSpr","path":"sprites/PlayerSwimMoveSpr/PlayerSwimMoveSpr.yy",},"order":0,},
     {"id":{"name":"GasMaskItemObj","path":"objects/GasMaskItemObj/GasMaskItemObj.yy",},"order":4,},
     {"id":{"name":"PlayerObj","path":"objects/PlayerObj/PlayerObj.yy",},"order":1,},
+    {"id":{"name":"PlayerShotgunReadySpr","path":"sprites/PlayerShotgunReadySpr/PlayerShotgunReadySpr.yy",},"order":3,},
     {"id":{"name":"LadderObj","path":"objects/LadderObj/LadderObj.yy",},"order":0,},
     {"id":{"name":"PistolCarryBackSpr","path":"sprites/PistolCarryBackSpr/PistolCarryBackSpr.yy",},"order":3,},
     {"id":{"name":"PlayerHatchetSwingSpr","path":"sprites/PlayerHatchetSwingSpr/PlayerHatchetSwingSpr.yy",},"order":1,},
