@@ -32,6 +32,7 @@
     {"id":{"name":"PlayerHurtSound","path":"sounds/PlayerHurtSound/PlayerHurtSound.yy",},"order":6,},
     {"id":{"name":"PlayerShootReticleObj","path":"objects/PlayerShootReticleObj/PlayerShootReticleObj.yy",},"order":3,},
     {"id":{"name":"PlayerClimbSpr","path":"sprites/PlayerClimbSpr/PlayerClimbSpr.yy",},"order":3,},
+    {"id":{"name":"PlayerShotgunShootDRSpr","path":"sprites/PlayerShotgunShootDRSpr/PlayerShotgunShootDRSpr.yy",},"order":4,},
     {"id":{"name":"PlayerClimbEndSpr","path":"sprites/PlayerClimbEndSpr/PlayerClimbEndSpr.yy",},"order":6,},
     {"id":{"name":"PlayerPistolShootDRSpr","path":"sprites/PlayerPistolShootDRSpr/PlayerPistolShootDRSpr.yy",},"order":6,},
     {"id":{"name":"PlayerTossSound","path":"sounds/PlayerTossSound/PlayerTossSound.yy",},"order":0,},
