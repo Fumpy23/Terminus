@@ -75,6 +75,7 @@
     {"id":{"name":"FloorDropObj","path":"objects/FloorDropObj/FloorDropObj.yy",},"order":2,},
     {"id":{"name":"LadderMObj","path":"objects/LadderMObj/LadderMObj.yy",},"order":2,},
     {"id":{"name":"ClimbableDrawerMObj","path":"objects/ClimbableDrawerMObj/ClimbableDrawerMObj.yy",},"order":1,},
+    {"id":{"name":"PlayerShotgunReloadSpr","path":"sprites/PlayerShotgunReloadSpr/PlayerShotgunReloadSpr.yy",},"order":5,},
     {"id":{"name":"PlayerRunSpr","path":"sprites/PlayerRunSpr/PlayerRunSpr.yy",},"order":1,},
     {"id":{"name":"PlayerHatchetSwingSound","path":"sounds/PlayerHatchetSwingSound/PlayerHatchetSwingSound.yy",},"order":5,},
     {"id":{"name":"PlayerMagnumBulletLoadSound","path":"sounds/PlayerMagnumBulletLoadSound/PlayerMagnumBulletLoadSound.yy",},"order":9,},
