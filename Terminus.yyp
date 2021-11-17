@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"LadderFatObj","path":"objects/LadderFatObj/LadderFatObj.yy",},"order":3,},
     {"id":{"name":"PlayerPistolReloadSpr","path":"sprites/PlayerPistolReloadSpr/PlayerPistolReloadSpr.yy",},"order":8,},
+    {"id":{"name":"PlayerShotgunDoneSpr","path":"sprites/PlayerShotgunDoneSpr/PlayerShotgunDoneSpr.yy",},"order":7,},
     {"id":{"name":"PlayerSwimObj","path":"objects/PlayerSwimObj/PlayerSwimObj.yy",},"order":6,},
     {"id":{"name":"GasMaskItemBackSpr","path":"sprites/GasMaskItemBackSpr/GasMaskItemBackSpr.yy",},"order":10,},
     {"id":{"name":"BarrierDrawerMObj","path":"objects/BarrierDrawerMObj/BarrierDrawerMObj.yy",},"order":2,},
@@ -21,6 +22,7 @@
     {"id":{"name":"PlayerHatchetSwingSpr","path":"sprites/PlayerHatchetSwingSpr/PlayerHatchetSwingSpr.yy",},"order":1,},
     {"id":{"name":"BlueWallObj","path":"objects/BlueWallObj/BlueWallObj.yy",},"order":1,},
     {"id":{"name":"ContextualButtonSpr","path":"sprites/ContextualButtonSpr/ContextualButtonSpr.yy",},"order":4,},
+    {"id":{"name":"PlayerShotgunShootDSpr","path":"sprites/PlayerShotgunShootDSpr/PlayerShotgunShootDSpr.yy",},"order":6,},
     {"id":{"name":"PlayerSwimSplashObj","path":"objects/PlayerSwimSplashObj/PlayerSwimSplashObj.yy",},"order":7,},
     {"id":{"name":"PlayerThrowSpr","path":"sprites/PlayerThrowSpr/PlayerThrowSpr.yy",},"order":0,},
     {"id":{"name":"PlayerDropColSpr","path":"sprites/PlayerDropColSpr/PlayerDropColSpr.yy",},"order":8,},
@@ -99,6 +101,7 @@
     {"id":{"name":"DrawerWallObj","path":"objects/DrawerWallObj/DrawerWallObj.yy",},"order":3,},
     {"id":{"name":"PlayerReticleColSpr","path":"sprites/PlayerReticleColSpr/PlayerReticleColSpr.yy",},"order":10,},
     {"id":{"name":"MagnumBulletFlashSpr","path":"sprites/MagnumBulletFlashSpr/MagnumBulletFlashSpr.yy",},"order":7,},
+    {"id":{"name":"ShotgunBulletFlashSpr","path":"sprites/ShotgunBulletFlashSpr/ShotgunBulletFlashSpr.yy",},"order":11,},
     {"id":{"name":"FlashGrenadeItemSpr","path":"sprites/FlashGrenadeItemSpr/FlashGrenadeItemSpr.yy",},"order":3,},
     {"id":{"name":"MeatItemObj","path":"objects/MeatItemObj/MeatItemObj.yy",},"order":0,},
     {"id":{"name":"DebugRoom2","path":"rooms/DebugRoom2/DebugRoom2.yy",},"order":1,},

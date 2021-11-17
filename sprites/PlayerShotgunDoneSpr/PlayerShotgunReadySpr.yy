@@ -56,7 +56,7 @@
     "spriteId": {"name":"PlayerShotgunReadySpr","path":"sprites/PlayerShotgunReadySpr/PlayerShotgunReadySpr.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 15.0,
+    "playbackSpeed": 18.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
